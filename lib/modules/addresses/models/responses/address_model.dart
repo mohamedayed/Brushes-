@@ -31,13 +31,9 @@ class Address {
 
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
-      'description': description,
       'address': address,
       'latitude': latitude,
       'longitude': longitude,
-      'default': isDefault,
-      'user_id': userId,
     };
   }
 }

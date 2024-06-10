@@ -50,6 +50,8 @@ class HomeController extends GetxController {
   }
 
   Future<void> getNearSalons() async {
+    salons.clear();
+    salons.refresh();
     final result = await _homeRepo.getNearSalons(
       AddressService.currentAddress.value!.latitude,
       AddressService.currentAddress.value!.longitude,

@@ -10,4 +10,5 @@ class EndPoints {
   static const String getNotificationsCount = '/notifications/count';
   static const String eServices = '/e_services';
   static const String availabilityHours = '/availability_hours';
+  static const String addresses = '/addresses';
 }

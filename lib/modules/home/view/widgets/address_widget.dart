@@ -1,5 +1,6 @@
 import 'package:brushes/core/resources/app_values.dart';
 import 'package:brushes/core/services/address/address_service.dart';
+import 'package:brushes/core/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,7 +16,9 @@ class AddressWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.toNamed(Routes.addressesScreen),
+      onTap: () => Utils.invokeIfAuthenticated(
+        callback: () => Get.toNamed(Routes.addressesScreen, arguments: {"from_booking_screen": false}),
+      ),
       child: Container(
         margin: hasMargin ? const EdgeInsets.symmetric(vertical: 0, horizontal: AppPadding.p8) : EdgeInsets.zero,
         padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 10),

@@ -50,8 +50,6 @@ class ApiClient {
     bool useToken = true,
   }) async {
     final String? token = await _cacheClient.get(StorageKeys.token);
-    print("***********");
-    print(token);
     return await _dio.get(
       url,
       queryParameters: {if (token != null) "api_token": token, ...?queryParameters},

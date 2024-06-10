@@ -97,4 +97,5 @@ class AppStrings {
   static const String example = 'مثال';
   static const String addressNotAvailable = 'العنوان غير متوفر';
   static const String nearestSalons = "أقرب الصالونات إليك";
+  static const String addresses = "عناوين";
 }

@@ -113,7 +113,7 @@ class _ChooseOnMapScreenState extends State<ChooseOnMapScreen> {
                       text: AppStrings.pickHere.tr,
                       onPressed: () async {
                         Address address = Address.fromJson({
-                          "address": stringAddress,
+                          "address": stringAddress.value,
                           "latitude": tappedLocation!.latitude,
                           "longitude": tappedLocation!.longitude
                         });

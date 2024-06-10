@@ -1,3 +1,4 @@
+import 'package:brushes/core/resources/resources.dart';
 import 'package:brushes/core/services/local/cache_client.dart';
 import 'package:brushes/core/services/local/storage_keys.dart';
 import 'package:brushes/core/services/location/location_service.dart';
@@ -15,11 +16,13 @@ class AddressService {
 
   void setCurrentAddress({Address? address}) async {
     if (address != null) {
+      await _cacheClient.save(StorageKeys.currentAddress, address.toJson());
       currentAddress(address);
       return;
     }
 
     final storedAddress = _cacheClient.get(StorageKeys.currentAddress);
+    await Future.delayed(Time.t300ms);
     if (storedAddress != null) {
       currentAddress(Address.fromJson(storedAddress));
     } else {

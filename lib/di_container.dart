@@ -93,7 +93,7 @@ Future<void> init() async {
 
   // Controllers
   sl.registerFactory<L10nController>(() => L10nController(sl<CacheClient>())..initLocale());
-  sl.registerFactory<AddressesController>(() => AddressesController(sl<AddressesRepo>()));
+  sl.registerFactory<AddressesController>(() => AddressesController(sl<AddressesRepo>(), sl<AddressService>()));
   sl.registerFactory<ForgetPasswordController>(() => ForgetPasswordController(sl<AuthRepo>()));
   sl.registerFactory<NewPasswordController>(() => NewPasswordController(sl<AuthRepo>()));
   sl.registerFactory<OTPController>(() => OTPController(sl<AuthRepo>()));
