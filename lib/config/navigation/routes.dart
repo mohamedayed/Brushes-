@@ -1,0 +1,30 @@
+class Routes {
+  static const String splashScreen = '/';
+  static const String signInScreen = '/sign_in_screen';
+  static const String signUpScreen = '/sign_up_screen';
+  static const String forgetPasswordScreen = '/forget_password_screen';
+  static const String otpScreen = '/otp_screen';
+  static const String newPasswordScreen = '/new_password_screen';
+  static const String passwordChangedScreen = '/password_changed_screen';
+  static const String layoutScreen = '/layout_screen';
+  static const String searchScreen = '/search_screen';
+  static const String categoriesScreen = '/categories_screen';
+  static const String salonDetailsScreen = '/salon_details_screen';
+  static const String employeeDetailsScreen = '/employee_details_screen';
+  static const String eServiceDetailsScreen = '/e_service_details_screen';
+  static const String bookServiceScreen = '/book_service_screen';
+  static const String bookingDetailsScreen = '/booking_details_screen';
+  static const String productDetailsScreen = '/product_details_screen';
+  static const String buyProductScreen = '/buy_product_screen';
+  static const String chatScreen = '/chat_screen';
+  static const String profileScreen = '/profile_screen';
+  static const String favouritesScreen = '/favourites_screen';
+  static const String addressesScreen = '/addresses_screen';
+  static const String themeScreen = '/theme_screen';
+  static const String languageScreen = '/language_screen';
+  static const String privacyPolicyScreen = '/privacy_policy_screen';
+  static const String notificationsScreen = '/notifications_screen';
+  static const String imageScreen = '/image_screen';
+  static const String chooseOnMapScreen = '/choose_on_map_screen';
+  static const String successScreen = '/success_screen';
+}

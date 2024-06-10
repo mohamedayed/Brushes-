@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "371753623141",
+    "project_id": "brushes-6eeec",
+    "storage_bucket": "brushes-6eeec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371753623141:android:ffe83657964c775350708c",
+        "android_client_info": {
+          "package_name": "com.ayed.brushes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371753623141-octrsktuv5gpjg4b2t4g9t0jaqq1hcsg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ayed.brushes",
+            "certificate_hash": "110b141f32d76b1db634f798002d1f17ae5b8d29"
+          }
+        },
+        {
+          "client_id": "371753623141-492qjhmd1f2num85v78g1k26rgoji928.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeqMIPNm-PdtFBp1LGKPbyc2io4-3peIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "371753623141-492qjhmd1f2num85v78g1k26rgoji928.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "371753623141-2cn8g3uqvtsckl09adjk9ve539vgpi7g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ayed.brushes"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
