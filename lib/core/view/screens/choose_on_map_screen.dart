@@ -26,7 +26,7 @@ class _ChooseOnMapScreenState extends State<ChooseOnMapScreen> {
   LatLng? tappedLocation;
 
   Future<void> init(BuildContext context) async {
-    final bool isLocationEnabled = await LocationService.isLocationServiceEnabled(context);
+    final bool isLocationEnabled = await LocationService.isLocationServiceEnabled();
     if (!isLocationEnabled || !mounted) return;
 
     final bool hasPermission = await LocationService.hasPermission();
@@ -37,8 +37,7 @@ class _ChooseOnMapScreenState extends State<ChooseOnMapScreen> {
     tappedLocation = LatLng(position.latitude, position.longitude);
     setState(() {});
     mapController.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(target: tappedLocation!, zoom: 14.4746)));
-    final String address =
-        await LocationService.getAddress(context, tappedLocation!.latitude, tappedLocation!.longitude);
+    final String address = await LocationService.getAddress(tappedLocation!.latitude, tappedLocation!.longitude);
     stringAddress.value = address;
   }
 
@@ -61,7 +60,7 @@ class _ChooseOnMapScreenState extends State<ChooseOnMapScreen> {
             onTap: (latLng) async {
               setState(() => tappedLocation = latLng);
               final String address =
-                  await LocationService.getAddress(context, tappedLocation!.latitude, tappedLocation!.longitude);
+                  await LocationService.getAddress(tappedLocation!.latitude, tappedLocation!.longitude);
               stringAddress.value = address;
             },
             markers: {

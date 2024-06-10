@@ -1,5 +1,4 @@
 import 'package:brushes/core/resources/resources.dart';
-import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
@@ -8,7 +7,7 @@ import 'package:location/location.dart' as loc;
 import '../../utils/alerts.dart';
 
 class LocationService {
-  static Future<bool> isLocationServiceEnabled(BuildContext context) async {
+  static Future<bool> isLocationServiceEnabled() async {
     bool isEnabled = await loc.Location.instance.serviceEnabled();
     if (isEnabled) {
       return true;
@@ -42,9 +41,9 @@ class LocationService {
   static Future<Position> getCurrentLocation() async =>
       await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.best);
 
-  static Future<String> getAddress(BuildContext context, double lat, double lng) async {
+  static Future<String> getAddress(double lat, double lng) async {
     try {
-      setLocaleIdentifier("en");
+      setLocaleIdentifier(Get.locale!.languageCode);
       List<Placemark> placeMarks = await placemarkFromCoordinates(lat, lng);
       return "${placeMarks[0].country}, ${placeMarks[0].administrativeArea}, ${placeMarks[0].subAdministrativeArea}, ${placeMarks[0].street}";
     } on Exception catch (_) {

@@ -1,3 +1,4 @@
+import 'package:brushes/core/services/address/address_service.dart';
 import 'package:brushes/modules/auth/controller/social_auth_controller.dart';
 import 'package:brushes/modules/auth/repositories/social_auth_repo.dart';
 import 'package:dio/dio.dart';
@@ -69,6 +70,7 @@ Future<void> init() async {
   sl.registerLazySingleton<CacheClient>(() => CacheClient(sl<GetStorage>()));
   sl.registerLazySingleton<NetworkInfo>(() => NetworkInfo(sl<Connectivity>()));
   sl.registerLazySingleton<ApiClient>(() => ApiClient(sl<Dio>(), sl<CacheClient>(), sl<PrettyDioLogger>()));
+  sl.registerLazySingleton<AddressService>(() => AddressService(sl<CacheClient>()));
 
   // Repositories
   sl.registerLazySingleton<ConfigsRepo>(() => ConfigsRepo(sl<ApiClient>(), sl<NetworkInfo>()));
@@ -115,6 +117,6 @@ Future<void> init() async {
   sl.registerFactory<SalonDetailsController>(() => SalonDetailsController(sl<SalonRepo>()));
   sl.registerFactory<sc.SearchController>(() => sc.SearchController(sl<SearchRepo>(), sl<CategoriesRepo>()));
   sl.registerFactory<ThemeController>(() => ThemeController());
-  sl.registerFactory<LayoutController>(() => LayoutController(sl<NotificationsRepo>()));
+  sl.registerFactory<LayoutController>(() => LayoutController(sl<NotificationsRepo>(), sl<AddressService>()));
   sl.registerFactory<SplashController>(() => SplashController(sl<ConfigsRepo>(), sl<ProfileRepo>(), sl<AuthRepo>()));
 }

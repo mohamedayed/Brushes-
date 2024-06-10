@@ -39,6 +39,7 @@ class ServiceItem extends StatelessWidget {
                     width: double.infinity,
                     height: double.infinity,
                   ),
+                  if(Utils.localizedValue(context, service.salon.name).isNotEmpty)
                   PositionedDirectional(
                     top: 6,
                     end: 6,
@@ -55,7 +56,7 @@ class ServiceItem extends StatelessWidget {
                         border: Border.all(color: AppColors.white, width: 1),
                       ),
                       child: CustomImage(
-                        image: (service.salon?.images ?? []).isEmpty ? "" : service.salon!.images[0].url,
+                        image: service.salon.images.isEmpty ? "" : service.salon.images[0].url,
                         width: double.infinity,
                         height: double.infinity,
                       ),

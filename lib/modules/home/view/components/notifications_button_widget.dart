@@ -21,7 +21,7 @@ class NotificationsButtonWidget extends GetWidget<LayoutController> {
     return GestureDetector(
       onTap: () => Utils.invokeIfAuthenticated(callback: () => Get.toNamed(Routes.notificationsScreen)),
       child: Badge(
-        label: Text(controller.notificationsCount.value.toString()),
+        label: Obx(() => Text(controller.notificationsCount.value.toString())),
         backgroundColor: AppColors.primary,
         alignment: AlignmentDirectional.topStart,
         child: Container(

@@ -1,3 +1,4 @@
+import 'package:brushes/core/services/address/address_service.dart';
 import 'package:get/get.dart';
 
 import '../../../core/utils/alerts.dart';
@@ -12,6 +13,11 @@ class HomeController extends GetxController {
   final CategoriesRepo _categoriesRepo;
 
   HomeController(this._homeRepo, this._categoriesRepo);
+
+  @override
+  void onInit() {
+    super.onInit();
+  }
 
   RxInt currentSlide = 0.obs;
   RxList<HomeSliderModel> sliders = <HomeSliderModel>[].obs;
@@ -40,6 +46,17 @@ class HomeController extends GetxController {
     result.fold(
       (failure) => Alerts.showSnackBar(message: failure.message, onActionPressed: getFeaturedCategories),
       (categories) => featuredCategories(categories),
+    );
+  }
+
+  Future<void> getNearSalons() async {
+    final result = await _homeRepo.getNearSalons(
+      AddressService.currentAddress.value!.latitude,
+      AddressService.currentAddress.value!.longitude,
+    );
+    result.fold(
+      (failure) => Alerts.showSnackBar(message: failure.message, onActionPressed: getNearSalons),
+      (salons) => this.salons(salons),
     );
   }
 }

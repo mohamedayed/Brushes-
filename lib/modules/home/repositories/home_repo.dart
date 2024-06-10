@@ -20,7 +20,7 @@ class HomeRepo extends BaseRepository {
     );
   }
 
-  Future<Either<Failure, List<Salon>>> getNearSalons(double myLat, double myLng, double areaLat, double areaLng) async {
+  Future<Either<Failure, List<Salon>>> getNearSalons(double myLat, double myLng) async {
     return super.call<List<Salon>>(
       httpRequest: () => _apiClient.get(
         url: EndPoints.getSalons,
@@ -30,8 +30,8 @@ class HomeRepo extends BaseRepository {
           'limit': '6',
           'myLat': myLat,
           'myLon': myLng,
-          'areaLat': areaLat,
-          'areaLon': areaLng,
+          'areaLat': myLat,
+          'areaLon': myLng,
         },
       ),
       successReturn: (data) => List<Salon>.from(data.map((salon) => Salon.fromJson(salon))),

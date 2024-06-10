@@ -13,6 +13,7 @@ class AppColors {
   static const Color gray900 = Color(0xff404040);
   static const Color bnbItem = Color(0xffc5cee0);
   static const Color warning = Color(0xfffc2947);
+  static const Color address = Color(0xff84888c);
   static const Color inProgressBooking = Color(0xFFFF7E00);
   static const Color acceptedBooking = Color(0xFF36AE7C);
   static const Color ratingStar = Color(0xFFF5AD59);

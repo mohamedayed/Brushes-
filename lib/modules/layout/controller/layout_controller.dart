@@ -9,13 +9,15 @@ import 'package:brushes/modules/products/view/screens/products_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../core/services/address/address_service.dart';
 import '../../../core/utils/alerts.dart';
 import '../../home/view/screens/home_screen.dart';
 
 class LayoutController extends GetxController {
   final NotificationsRepo _notificationsRepo;
+  final AddressService _addressService;
 
-  LayoutController(this._notificationsRepo);
+  LayoutController(this._notificationsRepo, this._addressService);
 
   @override
   void onInit() {
@@ -24,6 +26,11 @@ class LayoutController extends GetxController {
     Get.find<HomeController>().getParentCategories();
     Get.find<HomeController>().getFeaturedCategories();
     if (currentUser.value != null) getNotificationsCount();
+
+    _addressService.setCurrentAddress();
+    _addressService.onCurrentAddressChanged((address) {
+      Get.find<HomeController>().getNearSalons();
+    });
   }
 
   RxInt currentIndex = 0.obs;

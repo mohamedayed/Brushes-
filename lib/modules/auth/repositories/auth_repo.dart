@@ -53,6 +53,7 @@ class AuthRepo extends BaseRepository {
     try {
       await _cacheClient.delete(StorageKeys.isAuthed);
       await _cacheClient.delete(StorageKeys.token);
+      await _cacheClient.delete(StorageKeys.currentAddress);
       return Right(AppStrings.signedOutSuccessfully.tr);
     } on Exception catch (e) {
       return Left(ErrorHandler.handle(e).failure);
