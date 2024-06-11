@@ -1,3 +1,6 @@
+import 'package:brushes/core/base/models/pagination_model.dart';
+import 'package:brushes/core/enums/category_filters.dart';
+import 'package:brushes/core/utils/constants.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../core/services/error/failure.dart';
@@ -18,6 +21,27 @@ class EServiceRepo extends BaseRepository {
         queryParameters: {'with': 'salon;salon.taxes;salon.users;salon.address;categories'},
       ),
       successReturn: (data) => EService.fromJson(data),
+    );
+  }
+
+  Future<Either<Failure, PaginationModel<EService>>> getEServicesByCategory(
+    int id,
+    CategoryFilter categoryFilter, {
+    int page = 1,
+  }) async {
+    return super.call<PaginationModel<EService>>(
+      httpRequest: () => _apiClient.get(
+        url: EndPoints.eServices,
+        queryParameters: {
+          ...categoryFilter.queryParameters(id),
+          'limit': Constants.defaultPaginationLimit,
+          'offset': ((page - 1) * Constants.defaultPaginationLimit).toString(),
+        },
+      ),
+      successReturn: (data) => PaginationModel<EService>.fromJson(
+        {},
+        List<EService>.from(data.map((service) => EService.fromJson(service))),
+      ),
     );
   }
 }

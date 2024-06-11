@@ -42,7 +42,6 @@ class SearchScreen extends GetView<sc.SearchController> {
               () => controller.isLoading.value
                   ? const LoadingSpinner()
                   : GridView.builder(
-                      shrinkWrap: true,
                       padding: const EdgeInsets.all(AppPadding.p16),
                       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,

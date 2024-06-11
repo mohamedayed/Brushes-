@@ -9,6 +9,7 @@ class Routes {
   static const String layoutScreen = '/layout_screen';
   static const String searchScreen = '/search_screen';
   static const String categoriesScreen = '/categories_screen';
+  static const String categoryServicesScreen = '/category_services_screen';
   static const String salonDetailsScreen = '/salon_details_screen';
   static const String employeeDetailsScreen = '/employee_details_screen';
   static const String eServiceDetailsScreen = '/e_service_details_screen';

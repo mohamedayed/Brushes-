@@ -1,4 +1,6 @@
 import 'package:brushes/modules/booking/view/screens/booking_summary_screen.dart';
+import 'package:brushes/modules/categories/binding/category_services_binding.dart';
+import 'package:brushes/modules/categories/view/screens/category_services_screen.dart';
 import 'package:brushes/modules/checkout/binding/checkout_binding.dart';
 import 'package:brushes/modules/checkout/view/screens/chekout_screen.dart';
 import 'package:get/get.dart';
@@ -120,6 +122,12 @@ class Pages {
       name: Routes.categoriesScreen,
       page: () => const CategoriesScreen(),
       bindings: [CategoriesBinding()],
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: Routes.categoryServicesScreen,
+      page: () => const CategoryServicesScreen(),
+      bindings: [CategoryServicesBinding()],
       transition: Transition.cupertino,
     ),
     GetPage(

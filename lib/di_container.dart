@@ -2,6 +2,7 @@ import 'package:brushes/core/services/address/address_service.dart';
 import 'package:brushes/modules/auth/controller/social_auth_controller.dart';
 import 'package:brushes/modules/auth/repositories/social_auth_repo.dart';
 import 'package:brushes/modules/booking/controller/booking_summary_controller.dart';
+import 'package:brushes/modules/categories/controller/category_services_controller.dart';
 import 'package:brushes/modules/checkout/controller/checkout_controller.dart';
 import 'package:brushes/modules/checkout/repositories/checkout_repo.dart';
 import 'package:dio/dio.dart';
@@ -107,6 +108,7 @@ Future<void> init() async {
   sl.registerFactory<SocialAuthController>(() => SocialAuthController(sl<SocialAuthRepo>()));
   sl.registerFactory<BookingDetailsController>(() => BookingDetailsController(sl<BookingRepo>()));
   sl.registerFactory<CategoriesController>(() => CategoriesController(sl<CategoriesRepo>()));
+  sl.registerFactory<CategoryServicesController>(() => CategoryServicesController(sl<EServiceRepo>()));
   sl.registerFactory<ChatController>(() => ChatController(sl<ChatRepo>()));
   sl.registerFactory<BookServiceController>(() => BookServiceController(sl<BookEServiceRepo>()));
   sl.registerFactory<BookingSummaryController>(() => BookingSummaryController());

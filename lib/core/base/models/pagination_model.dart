@@ -15,7 +15,6 @@ class PaginationModel<T> {
   final int to;
   final bool onFirstPage;
   final bool hasMorePages;
-  final List<dynamic> links;
 
   PaginationModel({
     required this.data,
@@ -32,7 +31,6 @@ class PaginationModel<T> {
     required this.to,
     required this.onFirstPage,
     required this.hasMorePages,
-    required this.links,
   });
 
   factory PaginationModel.fromJson(Map<String, dynamic> json, List<T> data) => PaginationModel(
@@ -50,6 +48,5 @@ class PaginationModel<T> {
         to: JsonUtils.parseIntFromJson(json["to"]),
         onFirstPage: json["on_first_page"] ?? false,
         hasMorePages: json["hasMorePages"] ?? false,
-        links: List<dynamic>.from(json["links"].map((x) => x)),
       );
 }

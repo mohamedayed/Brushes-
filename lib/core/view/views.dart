@@ -3,6 +3,7 @@ export './components/app_bottom_sheet.dart';
 export './components/confirmation_dialog.dart';
 export './components/empty_list_component.dart';
 export './components/error_component.dart';
+export './components/paginated_grid_view.dart';
 export './components/paginated_list_view.dart';
 export './components/pick_image_sheet.dart';
 
@@ -10,6 +11,7 @@ export './components/pick_image_sheet.dart';
 export './screens/choose_on_map_screen.dart';
 export './screens/image_screen.dart';
 export './screens/success_screen.dart';
+
 // Widgets
 export './widgets/custom_appbar.dart';
 export './widgets/custom_button.dart';

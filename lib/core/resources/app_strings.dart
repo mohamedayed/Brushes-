@@ -117,4 +117,9 @@ class AppStrings {
   static const String pleaseSelectPaymentMethod = "الرجاء تحديد طريقة الدفع";
   static const String bookingBookedSuccessfully = "تم الحجز بنجاح";
   static const String noCategoriesAvailable = "لا توجد فئات متاحة";
+  static const String all = "الكل";
+  static const String availability = "التوفر";
+  static const String rating = "أعلى تقييم";
+  static const String featured = "متميز";
+  static const String popular = "شائع";
 }
