@@ -1,3 +1,4 @@
+import 'package:brushes/core/resources/app_values.dart';
 import 'package:brushes/core/resources/resources.dart';
 import 'package:brushes/core/view/views.dart';
 import 'package:flutter/material.dart';
@@ -42,8 +43,8 @@ class PriceRow extends StatelessWidget {
             ),
           ],
         ),
-        if (hasDivider != null && hasDivider!) const Divider(thickness: 1, height: 25),
-        if (hasDivider != null && !hasDivider!) const SizedBox(height: 6),
+        if (hasDivider != null && hasDivider!) const Divider(thickness: 1, height: AppSize.s16),
+        if (hasDivider != null && !hasDivider!) const SizedBox(height: AppSize.s4),
       ],
     );
   }

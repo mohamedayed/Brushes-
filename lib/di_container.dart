@@ -2,6 +2,8 @@ import 'package:brushes/core/services/address/address_service.dart';
 import 'package:brushes/modules/auth/controller/social_auth_controller.dart';
 import 'package:brushes/modules/auth/repositories/social_auth_repo.dart';
 import 'package:brushes/modules/booking/controller/booking_summary_controller.dart';
+import 'package:brushes/modules/checkout/controller/checkout_controller.dart';
+import 'package:brushes/modules/checkout/repositories/checkout_repo.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:get_storage/get_storage.dart';
@@ -79,6 +81,7 @@ Future<void> init() async {
   sl.registerLazySingleton<AuthRepo>(() => AuthRepo(sl<ApiClient>(), sl<CacheClient>(), sl<NetworkInfo>()));
   sl.registerLazySingleton<SocialAuthRepo>(() => SocialAuthRepo(sl<ApiClient>(), sl<CacheClient>(), sl<NetworkInfo>()));
   sl.registerLazySingleton<BookingRepo>(() => BookingRepo(sl<ApiClient>(), sl<NetworkInfo>()));
+  sl.registerLazySingleton<CheckoutRepo>(() => CheckoutRepo(sl<ApiClient>(), sl<NetworkInfo>()));
   sl.registerLazySingleton<CategoriesRepo>(() => CategoriesRepo(sl<ApiClient>(), sl<NetworkInfo>()));
   sl.registerLazySingleton<ChatRepo>(() => ChatRepo(sl<ApiClient>(), sl<NetworkInfo>()));
   sl.registerLazySingleton<EServiceRepo>(() => EServiceRepo(sl<ApiClient>(), sl<NetworkInfo>()));
@@ -107,6 +110,7 @@ Future<void> init() async {
   sl.registerFactory<ChatController>(() => ChatController(sl<ChatRepo>()));
   sl.registerFactory<BookServiceController>(() => BookServiceController(sl<BookEServiceRepo>()));
   sl.registerFactory<BookingSummaryController>(() => BookingSummaryController());
+  sl.registerFactory<CheckoutController>(() => CheckoutController(sl<CheckoutRepo>(), sl<BookingRepo>()));
   sl.registerFactory<EServiceDetailsController>(() => EServiceDetailsController(sl<EServiceRepo>()));
   sl.registerFactory<FavouritesController>(() => FavouritesController(sl<FavouritesRepo>()));
   sl.registerFactory<HomeController>(() => HomeController(sl<HomeRepo>(), sl<CategoriesRepo>()));

@@ -4,6 +4,7 @@ import 'package:brushes/modules/booking/controller/booking_summary_controller.da
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../config/navigation/navigation.dart';
 import '../../../../core/view/views.dart';
 
 class BookingSummaryBottomWidget extends GetWidget<BookingSummaryController> {
@@ -123,9 +124,7 @@ class BookingSummaryBottomWidget extends GetWidget<BookingSummaryController> {
           CustomButton(
             text: AppStrings.confirmAndBookNow.tr,
             margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-            onPressed: () async {
-              // Get.toNamed(Routes.CHECKOUT, arguments: _booking);
-            },
+            onPressed: () => Get.toNamed(Routes.checkoutScreen, arguments: {"booking_body": controller.bookingBody}),
           ),
         ],
       ),

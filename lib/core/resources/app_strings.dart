@@ -111,4 +111,9 @@ class AppStrings {
   static const String pleaseSelectBookingLocation = "من فضلك اختر موقع الحجز";
   static const String pleaseSelectYourBookingTime = "يرجى تحديد وقت الحجز الخاص بك";
   static const String pleaseSelectAnEmployee = "الرجاء تحديد موظف";
+  static const String checkout = "الدفع";
+  static const String paymentOptions = "خيارات الدفع";
+  static const String paymentOptionsHint = "اختر طريقة الدفع المفضلة لديك";
+  static const String pleaseSelectPaymentMethod = "الرجاء تحديد طريقة الدفع";
+  static const String bookingBookedSuccessfully = "تم الحجز بنجاح";
 }

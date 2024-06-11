@@ -1,4 +1,6 @@
 import 'package:brushes/modules/booking/view/screens/booking_summary_screen.dart';
+import 'package:brushes/modules/checkout/binding/checkout_binding.dart';
+import 'package:brushes/modules/checkout/view/screens/chekout_screen.dart';
 import 'package:get/get.dart';
 
 import '../../modules/booking/binding/booking_summary_binding.dart';
@@ -148,6 +150,12 @@ class Pages {
       name: Routes.bookingSummaryScreen,
       binding: BookingSummaryBinding(),
       page: () => const BookingSummaryScreen(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: Routes.checkoutScreen,
+      binding: CheckoutBinding(),
+      page: () => const CheckoutScreen(),
       transition: Transition.cupertino,
     ),
     GetPage(

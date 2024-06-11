@@ -32,16 +32,16 @@ class HomeScreen extends GetWidget<HomeController> {
                 child: Column(
                   children: [
                     const HomeSlider(),
-                    const VerticalSpace(AppSize.s24),
+                    const VerticalSpace(AppSize.s16),
                     HomeCategories(),
-                    SizedBox(height: 18),
+                    const VerticalSpace(AppSize.s24),
                     Column(
                       children: [
                         TitleRow(
                           title: AppStrings.nearestSalons.tr,
                           onActionPressed: () {},
                         ),
-                        SizedBox(height: 16),
+                        const VerticalSpace(AppSize.s16),
                         Obx(
                           () => SizedBox(
                             height: 224,
@@ -65,7 +65,7 @@ class HomeScreen extends GetWidget<HomeController> {
                           (index) {
                             return Column(
                               children: [
-                                const VerticalSpace(16),
+                                if (index != 0) const VerticalSpace(16),
                                 HomeServicesComponent(
                                   title: Utils.localizedValue(context, controller.featuredCategories[index].name),
                                   services: controller.featuredCategories[index].eServices,
