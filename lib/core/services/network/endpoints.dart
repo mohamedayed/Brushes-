@@ -6,6 +6,7 @@ class EndPoints {
   static const String getProfile = '/user';
   static const String getHomeSliders = '/slides';
   static const String getCategories = '/categories';
+  static const String assignedCategories = '/assigned-categories';
   static const String getSalons = '/salons';
   static const String getNotificationsCount = '/notifications/count';
   static const String eServices = '/e_services';

@@ -10,12 +10,7 @@ class CustomEmptyListPageWidget extends StatelessWidget {
   final String? subtitle;
   final String image;
 
-  const CustomEmptyListPageWidget({
-    this.image = AppImages.emptyBooking,
-    required this.title,
-    this.subtitle,
-    super.key,
-  });
+  const CustomEmptyListPageWidget({this.image = AppImages.emptyBooking, required this.title, this.subtitle, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,11 +40,7 @@ class CustomEmptyListSmallWidget extends StatelessWidget {
   final String title;
   final String image;
 
-  const CustomEmptyListSmallWidget({
-    required this.image,
-    required this.title,
-    super.key,
-  });
+  const CustomEmptyListSmallWidget({this.image = AppImages.emptyBooking, required this.title, super.key});
 
   @override
   Widget build(BuildContext context) {

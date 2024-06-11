@@ -23,6 +23,8 @@ class AppIcons {
   static const String lock = "$_iconsPath/lock.svg";
   static const String message = "$_iconsPath/message.svg";
   static const String messageActive = "$_iconsPath/message_active.svg";
+  static const String messages = "$_iconsPath/messages.svg";
+  static const String mobile = "$_iconsPath/mobile.svg";
   static const String profile = "$_iconsPath/profile.svg";
   static const String profileActive = "$_iconsPath/profile_active.svg";
   static const String search = "$_iconsPath/search.svg";
@@ -30,6 +32,7 @@ class AppIcons {
   static const String shopActive = "$_iconsPath/shop_active.svg";
   static const String sms = "$_iconsPath/sms.svg";
   static const String star = "$_iconsPath/star.svg";
+  static const String success = "$_iconsPath/success.svg";
   static const String ticket = "$_iconsPath/ticket.svg";
   static const String todo = "$_iconsPath/todo.svg";
   static const String todoActive = "$_iconsPath/todo_active.svg";

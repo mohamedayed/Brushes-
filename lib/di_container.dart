@@ -126,7 +126,7 @@ Future<void> init() async {
   sl.registerFactory<ProductDetailsController>(() => ProductDetailsController(sl<ProductsRepo>()));
   sl.registerFactory<ProfileController>(() => ProfileController(sl<ProfileRepo>()));
   sl.registerFactory<EmployeeDetailsController>(() => EmployeeDetailsController(sl<SalonRepo>()));
-  sl.registerFactory<SalonDetailsController>(() => SalonDetailsController(sl<SalonRepo>()));
+  sl.registerFactory<SalonDetailsController>(() => SalonDetailsController(sl<CategoriesRepo>(), sl<SalonRepo>()));
   sl.registerFactory<sc.SearchController>(() => sc.SearchController(sl<SearchRepo>(), sl<CategoriesRepo>()));
   sl.registerFactory<ThemeController>(() => ThemeController());
   sl.registerFactory<LayoutController>(() => LayoutController(sl<NotificationsRepo>(), sl<AddressService>()));

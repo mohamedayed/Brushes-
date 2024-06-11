@@ -137,4 +137,16 @@ class AppStrings {
   static const String howWasYourExperience = "كيف كانت تجربتك";
   static const String writeYourReview = "اكتب رأيك";
   static const String send = "إرسال";
+  static const String leaveSalonPageHint = "إذا خرجت من صفحة الصالون، سيتم حذف سلتك";
+  static const String salonCart = "عربة الصالون";
+  static const String reserveItems = "حجز العناصر";
+  static const String contactUs = "اتصل بنا";
+  static const String ifYouHaveAnyQuestions = "إذا كان لديك أي سؤال!";
+  static const String employees = "الموظفين";
+  static const String reviewsAndRatings = "المراجعات والتقييمات";
+  static const String noComments = "لا يوجد مراجعات";
+  static const String addToCart = "أضف إلى السلة";
+  static const String addedToCart = "تمت إضافته إلى سلة التسوق";
+  static const String remove = "إزالة";
+  static const String elementAdded = "العناصر المضافة";
 }

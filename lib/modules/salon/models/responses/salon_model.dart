@@ -82,4 +82,26 @@ class Salon {
       verified: JsonUtils.parseBoolFromJson(json['verified']),
     );
   }
+
+  Map<String, List<String>> get groupedAvailabilityHours {
+    Map<String, List<String>> result = {};
+    for (var element in availabilityHours) {
+      if (result.containsKey(element.day)) {
+        result[element.day]?.add('${element.startAt} - ${element.endAt}');
+      } else {
+        result[element.day] = ['${element.startAt} - ${element.endAt}'];
+      }
+    }
+    return result;
+  }
+
+  List<String> getAvailabilityHoursData(String day) {
+    List<String> result = [];
+    for (var element in availabilityHours) {
+      if (element.day == day) {
+        result.add(element.data);
+      }
+    }
+    return result;
+  }
 }

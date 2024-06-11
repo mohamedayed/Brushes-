@@ -14,6 +14,7 @@ class UserModel {
   final String address;
   final String bio;
   final bool auth;
+  final String role;
 
   UserModel({
     required this.id,
@@ -28,6 +29,7 @@ class UserModel {
     required this.bio,
     required this.avatar,
     required this.auth,
+    required this.role,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
@@ -43,5 +45,6 @@ class UserModel {
         bio: json['custom_fields']?['bio']?['view'] ?? JsonUtils.parseStringFromJson(json['bio']),
         avatar: Media.fromJson(json['avatar'] ?? {}),
         auth: JsonUtils.parseBoolFromJson(json['auth']),
+        role: JsonUtils.parseStringFromJson(json["user_role"]),
       );
 }

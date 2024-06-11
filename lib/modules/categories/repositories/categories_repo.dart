@@ -20,4 +20,19 @@ class CategoriesRepo extends BaseRepository {
       successReturn: (data) => List<CategoryModel>.from(data.map((category) => CategoryModel.fromJson(category))),
     );
   }
+
+  Future<Either<Failure, List<CategoryModel>>> getSalonCategories(int salonId) async {
+    return super.call<List<CategoryModel>>(
+      httpRequest: () => _apiClient.get(
+        url: EndPoints.assignedCategories,
+        queryParameters: {
+          'parent': 'true',
+          'orderBy': 'order',
+          'salon_id': salonId,
+          'sortBy': 'asc',
+        },
+      ),
+      successReturn: (data) => List<CategoryModel>.from(data.map((category) => CategoryModel.fromJson(category))),
+    );
+  }
 }
