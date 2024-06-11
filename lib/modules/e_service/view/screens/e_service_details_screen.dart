@@ -260,6 +260,7 @@ class EServiceDetailsScreen extends GetView<EServiceDetailsController> {
                               final BookingBody bookingBody = BookingBody(
                                 eServices: [controller.eService.value!],
                                 options: [],
+                                userId: currentUser.value!.id,
                                 quantity: 1,
                                 salon: controller.eService.value!.salon,
                               );

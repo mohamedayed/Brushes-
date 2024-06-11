@@ -12,6 +12,7 @@ class BookingBody {
   int? quantity;
   String? couponCode;
   double? couponValue;
+  int? userId;
   String? hint;
   String? bookingTime;
   Address? address;
@@ -25,6 +26,7 @@ class BookingBody {
     this.couponCode,
     this.couponValue,
     this.hint,
+    this.userId,
     this.bookingTime,
     this.address,
   });
@@ -38,6 +40,7 @@ class BookingBody {
     String? couponCode,
     double? couponValue,
     String? hint,
+    int? userId,
     String? bookingTime,
     Address? address,
   }) {
@@ -49,6 +52,7 @@ class BookingBody {
     this.couponCode = couponCode ?? this.couponCode;
     this.couponValue = couponValue ?? this.couponValue;
     this.hint = hint ?? this.hint;
+    this.userId = userId ?? this.userId;
     this.bookingTime = bookingTime ?? this.bookingTime;
     this.address = address ?? this.address;
   }
@@ -63,6 +67,7 @@ class BookingBody {
       if (quantity != null) "quantity": quantity,
       if (couponCode != null) "code": couponCode,
       if (hint != null) "hint": hint,
+      if (userId != null) "user_id": userId,
       if (bookingTime != null) "booking_at": bookingTime,
       if (address != null) "address": address!.toJson(),
     };

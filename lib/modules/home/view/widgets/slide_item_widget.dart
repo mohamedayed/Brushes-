@@ -1,4 +1,3 @@
-import 'package:brushes/core/resources/app_values.dart';
 import 'package:brushes/core/utils/ui_utils.dart';
 import 'package:brushes/core/utils/utils.dart';
 import 'package:brushes/core/view/views.dart';

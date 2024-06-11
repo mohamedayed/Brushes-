@@ -19,7 +19,7 @@ class Booking {
   final int quantity;
   final BookingStatus status;
   final UserModel user;
-  final UserModel employee;
+  UserModel? employee;
   final List<EService> eServices;
   final Salon salon;
   final List<Option> options;
@@ -62,7 +62,7 @@ class Booking {
         quantity: JsonUtils.parseIntFromJson(json['quantity']),
         status: BookingStatus.fromJson(json['booking_status'] ?? {}),
         user: UserModel.fromJson(json['user'] ?? {}),
-        employee: UserModel.fromJson(json['employee'] ?? {}),
+        employee: json['employee'] == null ? null : UserModel.fromJson(json['employee']),
         eServices: List<EService>.from(json['e_services'].map((service) => EService.fromJson(service))),
         salon: Salon.fromJson(json['salon'] ?? {}),
         address: Address.fromJson(json['address'] ?? {}),
