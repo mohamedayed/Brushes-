@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:brushes/modules/home/controller/home_controller.dart';
-import 'package:brushes/modules/home/view/widgets/category_item.dart';
+import 'package:brushes/modules/categories/view/widgets/category_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -28,7 +28,7 @@ class HomeCategories extends GetWidget<HomeController> {
                 ),
                 const VerticalSpace(AppSize.s16),
                 SizedBox(
-                  height: 82,
+                  height: AppSize.s82,
                   child: ListView.separated(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     scrollDirection: Axis.horizontal,

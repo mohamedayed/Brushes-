@@ -2,6 +2,7 @@ const String _imagesPath = "assets/images";
 const String _iconsPath = "assets/icons";
 
 class AppImages {
+  static const String blank = "$_imagesPath/blank.png";
   static const String emptyBooking = "$_imagesPath/empty_booking.svg";
   static const String placeholder = "$_imagesPath/placeholder.png";
   static const String signInBlurryBg = "$_imagesPath/sign_in_blurry_bg.png";

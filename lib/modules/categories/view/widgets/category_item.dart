@@ -39,13 +39,14 @@ class CategoryItem extends StatelessWidget {
                 height: double.infinity,
                 fit: BoxFit.contain,
                 color: color ?? category.color,
+                placeHolderImage: AppImages.blank,
               ),
             ),
           ),
         ),
         const VerticalSpace(AppSize.s4),
         SizedBox(
-          width: AppSize.s52,
+          width: AppSize.s72,
           child: CustomText(
             Utils.localizedValue(context, category.name),
             fontWeight: FontWeightManager.light,

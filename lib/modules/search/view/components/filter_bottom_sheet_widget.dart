@@ -33,7 +33,7 @@ class FilterBottomSheetWidget extends GetView<sc.SearchController> {
         Obx(() {
           if (controller.categories.isEmpty) return const LoadingSpinner();
           return ExpansionTile(
-            title: CustomText(AppStrings.categories.tr, fontWeight: FontWeightManager.semiBold),
+            title: CustomText(AppStrings.categories.tr, fontWeight: FontWeightManager.bold),
             initiallyExpanded: true,
             children: List.generate(
               controller.categories.length,
@@ -43,11 +43,9 @@ class FilterBottomSheetWidget extends GetView<sc.SearchController> {
                   controlAffinity: ListTileControlAffinity.trailing,
                   value: controller.selectedCategories.contains(controller.categories[index].id),
                   onChanged: (value) => controller.toggleCategory(value ?? false, controller.categories[index]),
-                  title: Text(
+                  title: CustomText(
                     Utils.localizedValue(context, controller.categories[index].name),
-                    style: Get.textTheme.bodyLarge,
-                    overflow: TextOverflow.fade,
-                    softWrap: false,
+                    fontWeight: FontWeightManager.semiBold,
                     maxLines: 1,
                   ),
                 ),

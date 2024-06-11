@@ -26,6 +26,7 @@ extension ImageTypeExtension on String {
 class CustomImage extends StatelessWidget {
   final String image;
   final Widget? errorWidget;
+  final String? placeHolderImage;
   final double? width;
   final double? height;
   final BoxFit fit;
@@ -36,6 +37,7 @@ class CustomImage extends StatelessWidget {
   const CustomImage({
     required this.image,
     this.errorWidget,
+    this.placeHolderImage,
     this.height,
     this.width,
     this.fit = BoxFit.cover,
@@ -80,7 +82,7 @@ class CustomImage extends StatelessWidget {
           width: width,
           height: height,
           alignment: alignment ?? AlignmentDirectional.center,
-          placeholder: AppImages.placeholder,
+          placeholder: placeHolderImage ?? AppImages.placeholder,
           fit: fit,
           color: color,
           placeholderFit: BoxFit.cover,

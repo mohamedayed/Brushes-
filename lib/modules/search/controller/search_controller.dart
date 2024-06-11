@@ -26,7 +26,7 @@ class SearchController extends GetxController {
   final TextEditingController textEditingController = TextEditingController();
 
   Future<void> getParentCategories() async {
-    final result = await _categoriesRepo.getAllParentCategories();
+    final result = await _categoriesRepo.getCategories(parent: true);
     result.fold(
       (failure) => Alerts.showSnackBar(message: failure.message, onActionPressed: getParentCategories),
       (categories) => this.categories(categories),

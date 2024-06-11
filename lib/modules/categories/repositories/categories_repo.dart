@@ -11,11 +11,11 @@ class CategoriesRepo extends BaseRepository {
 
   CategoriesRepo(this._apiClient, super.networkInfo);
 
-  Future<Either<Failure, List<CategoryModel>>> getAllParentCategories() async {
+  Future<Either<Failure, List<CategoryModel>>> getCategories({required parent}) async {
     return super.call<List<CategoryModel>>(
       httpRequest: () => _apiClient.get(
         url: EndPoints.getCategories,
-        queryParameters: {'parent': 'true', 'orderBy': 'order', 'sortBy': 'asc'},
+        queryParameters: {if (parent) 'parent': 'true', 'orderBy': 'order', 'sortBy': 'asc'},
       ),
       successReturn: (data) => List<CategoryModel>.from(data.map((category) => CategoryModel.fromJson(category))),
     );

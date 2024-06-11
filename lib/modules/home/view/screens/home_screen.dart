@@ -33,7 +33,7 @@ class HomeScreen extends GetWidget<HomeController> {
                   children: [
                     const HomeSlider(),
                     const VerticalSpace(AppSize.s16),
-                    HomeCategories(),
+                    const HomeCategories(),
                     const VerticalSpace(AppSize.s24),
                     Column(
                       children: [

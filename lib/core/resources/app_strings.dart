@@ -116,4 +116,5 @@ class AppStrings {
   static const String paymentOptionsHint = "اختر طريقة الدفع المفضلة لديك";
   static const String pleaseSelectPaymentMethod = "الرجاء تحديد طريقة الدفع";
   static const String bookingBookedSuccessfully = "تم الحجز بنجاح";
+  static const String noCategoriesAvailable = "لا توجد فئات متاحة";
 }
