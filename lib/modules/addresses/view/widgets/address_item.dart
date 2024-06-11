@@ -1,4 +1,3 @@
-import 'package:brushes/core/services/address/address_service.dart';
 import 'package:brushes/modules/addresses/controller/addresses_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,7 +19,6 @@ class AddressItem extends GetWidget<AddressesController> {
           Get.back(result: address);
         } else {
           controller.setCurrentAddress(address);
-
         }
       },
       child: Container(

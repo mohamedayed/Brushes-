@@ -1,6 +1,5 @@
-import 'package:brushes/core/resources/resources.dart';
 import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/e_service/controller/book_service_controller.dart';
+import 'package:brushes/modules/booking/controller/book_service_controller.dart';
 import 'package:brushes/modules/profile/models/responses/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -24,8 +23,8 @@ class BookEServiceEmployeeWidget extends GetView<BookServiceController> {
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                   border: Border.all(
-                    // color: Get.theme.colorScheme.primary.withOpacity(controller.isCheckedEmployee(employee) ? 0.8 : 0),
-                  ),
+                      // color: Get.theme.colorScheme.primary.withOpacity(controller.isCheckedEmployee(employee) ? 0.8 : 0),
+                      ),
                 ),
                 padding: EdgeInsets.all(4),
                 child: Column(

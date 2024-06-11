@@ -17,10 +17,13 @@ class TimeChipWidget extends GetWidget<BookServiceController> {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
+      controller.selectedTime.value;
       return GestureDetector(
-        onTap: () => controller.selectedTime(time),
+        onTap: () {
+          if (_isAvailable) controller.toggleSelectedTime(time);
+        },
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: AppPadding.p8, vertical: AppPadding.p4),
+          padding: const EdgeInsets.symmetric(horizontal: AppPadding.p20),
           decoration: BoxDecoration(
             color: _isAvailable
                 ? controller.selectedTime.value == time
@@ -28,7 +31,7 @@ class TimeChipWidget extends GetWidget<BookServiceController> {
                     : AppColors.white
                 : AppColors.grey100,
             borderRadius: const BorderRadius.all(Radius.circular(6)),
-            border: Border.all(color: AppColors.primary),
+            border: Border.all(color: _isAvailable ? AppColors.grey : AppColors.gray300),
           ),
           child: Center(
             child: CustomText(
@@ -38,6 +41,7 @@ class TimeChipWidget extends GetWidget<BookServiceController> {
                       ? AppColors.white
                       : AppColors.black
                   : AppColors.grey,
+              fontWeight: FontWeightManager.bold,
             ),
           ),
           //   color:Colors.yellow,

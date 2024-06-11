@@ -1,5 +1,7 @@
+import 'package:brushes/modules/booking/view/screens/booking_summary_screen.dart';
 import 'package:get/get.dart';
 
+import '../../modules/booking/binding/booking_summary_binding.dart';
 import '../../modules/splash/binding/splash_binding.dart';
 import '../../modules/settings/binding/theme_binding.dart';
 import '../../modules/search/binding/search_binding.dart';
@@ -12,7 +14,7 @@ import '../../modules/notifications/binding/notifications_binding.dart';
 import '../../modules/layout/binding/layout_binding.dart';
 import '../../modules/info_pages/binding/privacy_policy_binding.dart';
 import '../../modules/favourites/binding/favourites_binding.dart';
-import '../../modules/e_service/binding/book_service_binding.dart';
+import '../../modules/booking/binding/book_service_binding.dart';
 import '../../modules/e_service/binding/e_service_details_binding.dart';
 import '../../modules/chat/binding/chat_binding.dart';
 import '../../modules/categories/binding/categories_binding.dart';
@@ -38,7 +40,7 @@ import '../../modules/notifications/view/screens/notifications_screen.dart';
 import '../../modules/layout/view/screens/layout_screen.dart';
 import '../../modules/info_pages/view/screens/privacy_policy_screen.dart';
 import '../../modules/favourites/view/screens/favourites_screen.dart';
-import '../../modules/e_service/view/screens/book_service_screen.dart';
+import '../../modules/booking/view/screens/book_service_screen.dart';
 import '../../modules/e_service/view/screens/e_service_details_screen.dart';
 import '../../modules/chat/view/screens/chat_screen.dart';
 import '../../modules/categories/view/screens/categories_screen.dart';
@@ -140,6 +142,12 @@ class Pages {
       name: Routes.bookServiceScreen,
       binding: BookServiceBinding(),
       page: () => const BookServiceScreen(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: Routes.bookingSummaryScreen,
+      binding: BookingSummaryBinding(),
+      page: () => const BookingSummaryScreen(),
       transition: Transition.cupertino,
     ),
     GetPage(

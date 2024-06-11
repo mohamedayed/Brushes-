@@ -7,10 +7,12 @@ import 'package:flutter/material.dart';
 class PriceWidget extends StatelessWidget {
   final double myPrice;
   final String zeroPlaceholder;
+  final double textSizeFactor;
 
   const PriceWidget({
     required this.myPrice,
     this.zeroPlaceholder = '-',
+    this.textSizeFactor = 1.0,
     super.key,
   });
 
@@ -35,14 +37,16 @@ class PriceWidget extends StatelessWidget {
             style: TextStyle(
               fontFamily: L10n.isAr(context) ? FontConstants.arabicFontFamily : FontConstants.englishFontFamily,
               fontWeight: FontWeightManager.bold,
+              fontSize: FontSize.s16 * textSizeFactor,
             ),
           ),
           if (configs.value?.defaultCurrency != null)
             TextSpan(
-              text: " ${configs.value?.defaultCurrency} ",
+              text: "${configs.value?.defaultCurrency}",
               style: TextStyle(
                 fontFamily: L10n.isAr(context) ? FontConstants.arabicFontFamily : FontConstants.englishFontFamily,
                 fontWeight: FontWeightManager.bold,
+                fontSize: FontSize.s12 * textSizeFactor,
               ),
             ),
         ],

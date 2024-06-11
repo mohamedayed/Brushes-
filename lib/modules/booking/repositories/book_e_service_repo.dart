@@ -1,3 +1,4 @@
+import 'package:brushes/modules/booking/models/requests/validate_coupon_body.dart';
 import 'package:dartz/dartz.dart';
 import 'package:intl/intl.dart';
 
@@ -5,6 +6,7 @@ import '../../../core/base/repositories/base_repository.dart';
 import '../../../core/services/error/failure.dart';
 import '../../../core/services/network/api_client.dart';
 import '../../../core/services/network/endpoints.dart';
+import '../models/responses/coupon.dart';
 
 class BookEServiceRepo extends BaseRepository {
   final ApiClient _apiClient;
@@ -25,6 +27,13 @@ class BookEServiceRepo extends BaseRepository {
         },
       ),
       successReturn: (data) => List<List<dynamic>>.from(data),
+    );
+  }
+
+  Future<Either<Failure, Coupon?>> validateCoupon(ValidateCouponBody validateCouponBody) async {
+    return super.call<Coupon?>(
+      httpRequest: () => _apiClient.get(url: EndPoints.coupons, queryParameters: validateCouponBody.toJson()),
+      successReturn: (data) => data == null ? null : Coupon.fromJson(data),
     );
   }
 }

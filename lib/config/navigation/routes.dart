@@ -13,6 +13,7 @@ class Routes {
   static const String employeeDetailsScreen = '/employee_details_screen';
   static const String eServiceDetailsScreen = '/e_service_details_screen';
   static const String bookServiceScreen = '/book_service_screen';
+  static const String bookingSummaryScreen = '/booking_summary_screen';
   static const String bookingDetailsScreen = '/booking_details_screen';
   static const String productDetailsScreen = '/product_details_screen';
   static const String buyProductScreen = '/buy_product_screen';

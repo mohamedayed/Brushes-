@@ -11,7 +11,7 @@ import 'package:get/get.dart';
 
 import '../../../../core/view/views.dart';
 import '../components/title_row.dart';
-import '../widgets/address_widget.dart';
+import '../../../addresses/view/widgets/address_widget.dart';
 
 class HomeScreen extends GetWidget<HomeController> {
   const HomeScreen({super.key});
@@ -25,7 +25,7 @@ class HomeScreen extends GetWidget<HomeController> {
             VerticalSpace(8),
             HomeSearchBar(),
             VerticalSpace(AppSize.s8),
-            AddressWidget(),
+            AddressWidget(fromBookingScreen: false),
             Expanded(
               child: SingleChildScrollView(
                 padding: EdgeInsets.symmetric(vertical: AppPadding.p16),

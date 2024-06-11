@@ -19,4 +19,8 @@ class Tax {
         type: JsonUtils.parseStringFromJson(json['type']),
         value: JsonUtils.parseNumFromJson(json['value']),
       );
+
+  Map<String, dynamic> toJson() {
+    return {"id": id, "name": name, "value": value, "type": type};
+  }
 }

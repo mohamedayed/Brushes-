@@ -31,9 +31,12 @@ class Address {
 
   Map<String, dynamic> toJson() {
     return {
+      if (id != 0) "id": id,
+      if (description.isNotEmpty) "description": description,
       'address': address,
       'latitude': latitude,
       'longitude': longitude,
+      if (userId.isNotEmpty) "user_id": userId,
     };
   }
 }

@@ -98,4 +98,17 @@ class AppStrings {
   static const String addressNotAvailable = 'العنوان غير متوفر';
   static const String nearestSalons = "أقرب الصالونات إليك";
   static const String addresses = "عناوين";
+  static const String invalidCoupon = "قسيمة غير صالحة";
+  static const String bookingSummary = "ملخص الحجز";
+  static const String confirmAndBookNow = "التأكيد والحجز الآن";
+  static const String totalAmount = "المبلغ الإجمالي";
+  static const String coupon = "القسيمة";
+  static const String subtotal = "الإجمالي";
+  static const String taxAmount = "قيمة الضريبة";
+  static const String bookingAt = "الحجز في";
+  static const String yourAddress = "عنوانك";
+  static const String pleaseSelectBookingAddress = "من فضلك قم باختيار عنوان الحجز";
+  static const String pleaseSelectBookingLocation = "من فضلك اختر موقع الحجز";
+  static const String pleaseSelectYourBookingTime = "يرجى تحديد وقت الحجز الخاص بك";
+  static const String pleaseSelectAnEmployee = "الرجاء تحديد موظف";
 }

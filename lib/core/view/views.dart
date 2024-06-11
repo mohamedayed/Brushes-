@@ -21,6 +21,7 @@ export './widgets/custom_text_button.dart';
 export './widgets/custom_text_field.dart';
 export './widgets/default_back_button.dart';
 export './widgets/main_appbar.dart';
+export './widgets/price_row.dart';
 export './widgets/platform_widgets/base_platform_widget.dart';
 export './widgets/platform_widgets/loading_spinner.dart';
 export './widgets/price_text.dart';

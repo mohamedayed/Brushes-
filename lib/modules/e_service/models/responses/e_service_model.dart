@@ -24,7 +24,6 @@ class EService {
   final List<OptionGroup> optionGroups;
   final Salon salon;
 
-  // Constructor with required fields
   EService({
     required this.id,
     required this.name,
@@ -44,7 +43,6 @@ class EService {
     required this.salon,
   });
 
-  // Factory constructor to create an instance from JSON
   factory EService.fromJson(Map<String, dynamic> json) {
     return EService(
       id: JsonUtils.parseIntFromJson(json['id']),
@@ -71,4 +69,6 @@ class EService {
       salon: Salon.fromJson(json['salon'] ?? {}),
     );
   }
+
+  num get getPrice => discountPrice > 0 ? discountPrice : price;
 }

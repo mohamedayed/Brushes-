@@ -2,6 +2,7 @@ import 'package:brushes/config/navigation/navigation.dart';
 import 'package:brushes/core/utils/globals.dart';
 import 'package:brushes/core/utils/utils.dart';
 import 'package:brushes/core/view/views.dart';
+import 'package:brushes/modules/booking/models/requests/booking_body.dart';
 import 'package:brushes/modules/e_service/controller/e_service_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -205,13 +206,14 @@ class EServiceDetailsScreen extends GetView<EServiceDetailsController> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    CustomText(Utils.localizedValue(context, controller.eService.value!.salon.name), autoSized: true, maxLines: 1),
+                                    CustomText(Utils.localizedValue(context, controller.eService.value!.salon.name),
+                                        autoSized: true, maxLines: 1),
                                   ],
                                 ),
                               ),
                               // CustomText("(${_eService.salon.reviews.length})", height: 0, color: AppColors.grey),
                               RatingBarIndicator(
-                                rating: controller.eService.value!.salon.rate.toDouble() ?? 0,
+                                rating: controller.eService.value!.salon.rate.toDouble(),
                                 itemCount: 5,
                                 itemSize: 20,
                                 unratedColor: AppColors.gray200,
@@ -247,17 +249,23 @@ class EServiceDetailsScreen extends GetView<EServiceDetailsController> {
                             itemCount: controller.eService.value!.images.length,
                           ),
                         ),
-                        VerticalSpace(14),
-                        Divider(height: 1, thickness: 3, color: AppColors.grey100),
+                        const VerticalSpace(AppSize.s14),
+                        const Divider(height: 1, thickness: 3, color: AppColors.grey100),
                         Padding(
-                          padding: EdgeInsets.all(24),
+                          padding: const EdgeInsets.all(AppPadding.p24),
                           child: CustomButton(
                             text:
                                 "${AppStrings.bookServiceBy.tr} ${controller.eService.value!.price} ${configs.value!.defaultCurrency}",
                             onPressed: () {
+                              final BookingBody bookingBody = BookingBody(
+                                eServices: [controller.eService.value!],
+                                options: [],
+                                quantity: 1,
+                                salon: controller.eService.value!.salon,
+                              );
                               Get.toNamed(
                                 Routes.bookServiceScreen,
-                                // arguments: {'booking': controller.booking.value},
+                                arguments: {'booking_body': bookingBody},
                               );
                             },
                           ),

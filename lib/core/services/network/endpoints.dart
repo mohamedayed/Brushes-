@@ -11,4 +11,5 @@ class EndPoints {
   static const String eServices = '/e_services';
   static const String availabilityHours = '/availability_hours';
   static const String addresses = '/addresses';
+  static const String coupons = '/coupons';
 }
