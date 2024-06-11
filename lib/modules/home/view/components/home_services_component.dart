@@ -1,3 +1,4 @@
+import 'package:brushes/core/resources/resources.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/view/views.dart';
 import '../../../e_service/models/responses/e_service_model.dart';
@@ -20,9 +21,9 @@ class HomeServicesComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        VerticalSpace(10),
-        TitleRow(title: title, onActionPressed: onActionPressed),
-        VerticalSpace(16),
+        const VerticalSpace(10),
+        TitleRow(title: title,viewMoreColor: AppColors.warning, onActionPressed: onActionPressed),
+        const VerticalSpace(16),
         SizedBox(
           height: 256,
           child: ListView.separated(

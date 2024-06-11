@@ -60,7 +60,7 @@ class BookingSummaryScreen extends GetWidget<BookingSummaryController> {
             ),
         ],
       ),
-      bottomNavigationBar: const BookingSummaryBottomWidget(),
+      bottomNavigationBar: BookingSummaryBottomWidget(bookingBody: controller.bookingBody),
     );
   }
 }

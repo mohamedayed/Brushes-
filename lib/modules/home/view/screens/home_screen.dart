@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:brushes/core/resources/resources.dart';
 import 'package:brushes/core/utils/utils.dart';
 import 'package:brushes/modules/home/controller/home_controller.dart';
@@ -9,6 +11,7 @@ import 'package:brushes/modules/salon/view/widgets/salon_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../config/navigation/navigation.dart';
 import '../../../../core/view/views.dart';
 import '../components/title_row.dart';
 import '../../../addresses/view/widgets/address_widget.dart';
@@ -39,6 +42,7 @@ class HomeScreen extends GetWidget<HomeController> {
                       children: [
                         TitleRow(
                           title: AppStrings.nearestSalons.tr,
+                          viewMoreColor: AppColors.warning,
                           onActionPressed: () {},
                         ),
                         const VerticalSpace(AppSize.s16),
@@ -63,13 +67,17 @@ class HomeScreen extends GetWidget<HomeController> {
                         children: List.generate(
                           controller.featuredCategories.length,
                           (index) {
+                            final Color color = Colors.primaries[Random().nextInt(Colors.primaries.length)];
                             return Column(
                               children: [
                                 if (index != 0) const VerticalSpace(16),
                                 HomeServicesComponent(
                                   title: Utils.localizedValue(context, controller.featuredCategories[index].name),
                                   services: controller.featuredCategories[index].eServices,
-                                  // onActionPressed: () => Get.toNamed(Routes.CATEGORY, arguments: _category),
+                                  onActionPressed: () => Get.toNamed(
+                                    Routes.categoryServicesScreen,
+                                    arguments: {"category": controller.featuredCategories[index], "color": color},
+                                  ),
                                 ),
                               ],
                             );

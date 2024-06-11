@@ -122,4 +122,13 @@ class AppStrings {
   static const String rating = "أعلى تقييم";
   static const String featured = "متميز";
   static const String popular = "شائع";
+  static const String bookingDetails = 'تفاصيل الحجز';
+  static const String bookingLocation = 'موقع الحجز';
+  static const String contactProvider = 'مزود الاتصال';
+  static const String status = 'الحالة';
+  static const String paymentStatus = 'حالة السداد';
+  static const String paymentMethod = 'طريقة الدفع';
+  static const String leaveComment = 'اترك تعليق';
+  static const String notPaid = 'لم يتم الدفع';
+  static const String pricing = 'التسعير';
 }

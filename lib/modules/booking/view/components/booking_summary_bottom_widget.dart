@@ -1,26 +1,29 @@
 import 'package:brushes/core/resources/resources.dart';
 import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/modules/booking/controller/booking_summary_controller.dart';
+import 'package:brushes/modules/booking/models/requests/booking_body.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../config/navigation/navigation.dart';
 import '../../../../core/view/views.dart';
 
-class BookingSummaryBottomWidget extends GetWidget<BookingSummaryController> {
-  const BookingSummaryBottomWidget({super.key});
+class BookingSummaryBottomWidget extends StatelessWidget {
+  final BookingBody bookingBody;
+  final bool informative;
+
+  const BookingSummaryBottomWidget({required this.bookingBody, this.informative = false, super.key});
 
   @override
   Widget build(BuildContext context) {
     List<Widget> paymentDetails = [
       Column(
         children: List.generate(
-          controller.bookingBody.salon?.taxes.length ?? 0,
+          bookingBody.salon?.taxes.length ?? 0,
           (index) {
-            final tax = controller.bookingBody.salon!.taxes[index];
+            final tax = bookingBody.salon!.taxes[index];
             return PriceRow(
               description: tax.name,
-              hasDivider: (controller.bookingBody.salon!.taxes.length - 1) == index,
+              hasDivider: (bookingBody.salon!.taxes.length - 1) == index,
               child: Align(
                 alignment: AlignmentDirectional.centerEnd,
                 child: tax.type == 'percent'
@@ -39,7 +42,7 @@ class BookingSummaryBottomWidget extends GetWidget<BookingSummaryController> {
         hasDivider: false,
         child: Align(
           alignment: AlignmentDirectional.centerEnd,
-          child: PriceWidget(myPrice: controller.bookingBody.taxesValue, textSizeFactor: 1.2),
+          child: PriceWidget(myPrice: bookingBody.taxesValue, textSizeFactor: 1.2),
         ),
       ),
       PriceRow(
@@ -47,10 +50,10 @@ class BookingSummaryBottomWidget extends GetWidget<BookingSummaryController> {
         hasDivider: true,
         child: Align(
           alignment: AlignmentDirectional.centerEnd,
-          child: PriceWidget(myPrice: controller.bookingBody.subtotal, textSizeFactor: 1.2),
+          child: PriceWidget(myPrice: bookingBody.subtotal, textSizeFactor: 1.2),
         ),
       ),
-      if ((controller.bookingBody.couponValue ?? 0) > 0)
+      if ((bookingBody.couponValue ?? 0) > 0)
         PriceRow(
           description: AppStrings.coupon.tr,
           hasDivider: true,
@@ -59,7 +62,7 @@ class BookingSummaryBottomWidget extends GetWidget<BookingSummaryController> {
             child: Wrap(
               children: [
                 const CustomText(' - '),
-                PriceWidget(myPrice: controller.bookingBody.getCouponValue, textSizeFactor: 1.2),
+                PriceWidget(myPrice: bookingBody.getCouponValue, textSizeFactor: 1.2),
               ],
             ),
           ),
@@ -68,13 +71,12 @@ class BookingSummaryBottomWidget extends GetWidget<BookingSummaryController> {
         description: AppStrings.totalAmount.tr,
         child: Align(
           alignment: AlignmentDirectional.centerEnd,
-          child: PriceWidget(myPrice: controller.bookingBody.total, textSizeFactor: 1.2),
+          child: PriceWidget(myPrice: bookingBody.total, textSizeFactor: 1.2),
         ),
       ),
     ];
-    controller.bookingBody.eServices?.forEach((eService) {
-      final options =
-          controller.bookingBody.options?.where((option) => option.eServiceId == eService.id).toList() ?? [];
+    bookingBody.eServices?.forEach((eService) {
+      final options = bookingBody.options?.where((option) => option.eServiceId == eService.id).toList() ?? [];
       paymentDetails.insert(
         0,
         Wrap(
@@ -111,7 +113,8 @@ class BookingSummaryBottomWidget extends GetWidget<BookingSummaryController> {
         color: AppColors.white,
         borderRadius: const BorderRadius.all(Radius.circular(AppSize.s20)),
         boxShadow: [
-          BoxShadow(color: AppColors.black.withOpacity(0.05), blurRadius: 10, offset: const Offset(0, -5)),
+          if (!informative)
+            BoxShadow(color: AppColors.black.withOpacity(0.05), blurRadius: 10, offset: const Offset(0, -5)),
         ],
       ),
       child: Column(
@@ -121,11 +124,12 @@ class BookingSummaryBottomWidget extends GetWidget<BookingSummaryController> {
             margin: const EdgeInsets.symmetric(horizontal: AppPadding.p20, vertical: AppPadding.p10),
             child: Column(children: paymentDetails),
           ),
-          CustomButton(
-            text: AppStrings.confirmAndBookNow.tr,
-            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-            onPressed: () => Get.toNamed(Routes.checkoutScreen, arguments: {"booking_body": controller.bookingBody}),
-          ),
+          if (!informative)
+            CustomButton(
+              text: AppStrings.confirmAndBookNow.tr,
+              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              onPressed: () => Get.toNamed(Routes.checkoutScreen, arguments: {"booking_body": bookingBody}),
+            ),
         ],
       ),
     );

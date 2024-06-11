@@ -20,7 +20,7 @@ class BookingItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: inList ? () => Get.toNamed(Routes.bookingDetailsScreen, arguments: booking) : null,
+      onTap: inList ? () => Get.toNamed(Routes.bookingDetailsScreen, arguments: {"id": booking.id}) : null,
       borderRadius: BorderRadius.circular(6),
       child: Container(
         clipBehavior: inList ? Clip.antiAlias : Clip.none,
