@@ -1,6 +1,7 @@
 import 'package:brushes/core/services/address/address_service.dart';
 import 'package:brushes/modules/auth/controller/social_auth_controller.dart';
 import 'package:brushes/modules/auth/repositories/social_auth_repo.dart';
+import 'package:brushes/modules/booking/controller/booking_rating_controller.dart';
 import 'package:brushes/modules/booking/controller/booking_summary_controller.dart';
 import 'package:brushes/modules/booking/controller/my_bookings_controller.dart';
 import 'package:brushes/modules/categories/controller/category_services_controller.dart';
@@ -110,6 +111,7 @@ Future<void> init() async {
   sl.registerFactory<MyBookingsController>(() => MyBookingsController(sl<BookingRepo>()));
   sl.registerFactory<BookingDetailsController>(() => BookingDetailsController(sl<BookingRepo>()));
   sl.registerFactory<BookingSummaryController>(() => BookingSummaryController());
+  sl.registerFactory<BookingRatingController>(() => BookingRatingController(sl<BookingRepo>()));
   sl.registerFactory<CategoriesController>(() => CategoriesController(sl<CategoriesRepo>()));
   sl.registerFactory<CategoryServicesController>(() => CategoryServicesController(sl<EServiceRepo>()));
   sl.registerFactory<ChatController>(() => ChatController(sl<ChatRepo>()));

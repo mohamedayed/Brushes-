@@ -8,6 +8,7 @@ import 'package:brushes/modules/booking/view/components/booking_summary_bottom_w
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../components/booking_rating_dialog.dart';
 import '../widgets/booking_detail_row.dart';
 import '../widgets/booking_item.dart';
 
@@ -34,7 +35,7 @@ class BookingDetailsScreen extends GetWidget<BookingDetailsController> {
                           ListTile(
                             title: CustomText(AppStrings.contactProvider.tr, fontWeight: FontWeight.w300),
                             subtitle: CustomText(
-                              controller.booking.value!.salon.phoneNumber ?? '',
+                              controller.booking.value!.salon.phoneNumber,
                               fontWeight: FontWeight.w400,
                             ),
                             trailing: Row(
@@ -118,15 +119,13 @@ class BookingDetailsScreen extends GetWidget<BookingDetailsController> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 28),
+                            padding: const EdgeInsets.symmetric(horizontal: 28),
                             child: CustomButton(
                               text: AppStrings.leaveComment.tr,
-                              // color: AppColors.black,
-                              onPressed: () {},
-                              // onPressed: () => showDialog(
-                              //   context: context,
-                              //   builder: (context) => RatingDialog(isBooking: true, booking: controller.booking.value),
-                              // ),
+                              onPressed: () => showDialog(
+                                context: context,
+                                builder: (context) => RatingDialog(isBooking: true, booking: controller.booking.value),
+                              ),
                             ),
                           )
                         ],

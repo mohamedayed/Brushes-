@@ -131,4 +131,10 @@ class AppStrings {
   static const String leaveComment = 'اترك تعليق';
   static const String notPaid = 'لم يتم الدفع';
   static const String pricing = 'التسعير';
+  static const String pleaseTabStars = "يرجى تقييم خدمات الصالون بالضغط على النجوم";
+  static const String tellUsAboutTheSalon = "أخبرنا شيئًا عن خدمات الصالون";
+  static const String reviewAdded = "شكرًا لك! تمت إضافة رأيك";
+  static const String howWasYourExperience = "كيف كانت تجربتك";
+  static const String writeYourReview = "اكتب رأيك";
+  static const String send = "إرسال";
 }

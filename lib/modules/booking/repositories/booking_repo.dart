@@ -1,4 +1,5 @@
 import 'package:brushes/core/services/network/endpoints.dart';
+import 'package:brushes/modules/booking/models/requests/add_review_body.dart';
 import 'package:brushes/modules/booking/models/requests/booking_body.dart';
 import 'package:dartz/dartz.dart';
 
@@ -7,6 +8,7 @@ import '../../../core/services/error/failure.dart';
 import '../../../core/services/network/api_client.dart';
 import '../../../core/base/repositories/base_repository.dart';
 import '../../../core/utils/constants.dart';
+import '../../salon/models/responses/review_model.dart';
 import '../models/responses/booking_model.dart';
 import '../models/responses/booking_status.dart';
 
@@ -59,6 +61,13 @@ class BookingRepo extends BaseRepository {
         {},
         List<Booking>.from(data.map((booking) => Booking.fromJson(booking))),
       ),
+    );
+  }
+
+  Future<Either<Failure, Review>> addReview(AddReviewBody addReviewBody) async {
+    return super.call<Review>(
+      httpRequest: () => _apiClient.post(url: EndPoints.salonReview, requestBody: addReviewBody.toJson()),
+      successReturn: (data) => Review.fromJson(data),
     );
   }
 }

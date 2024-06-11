@@ -29,6 +29,7 @@ class AppIcons {
   static const String shop = "$_iconsPath/shop.svg";
   static const String shopActive = "$_iconsPath/shop_active.svg";
   static const String sms = "$_iconsPath/sms.svg";
+  static const String star = "$_iconsPath/star.svg";
   static const String ticket = "$_iconsPath/ticket.svg";
   static const String todo = "$_iconsPath/todo.svg";
   static const String todoActive = "$_iconsPath/todo_active.svg";

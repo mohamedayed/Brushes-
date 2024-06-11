@@ -15,4 +15,5 @@ class EndPoints {
   static const String paymentMethods = '/payment_methods';
   static const String bookings = '/bookings';
   static const String bookingStatuses = '/booking_statuses';
+  static const String salonReview = '/salon_reviews';
 }

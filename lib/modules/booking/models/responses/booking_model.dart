@@ -63,13 +63,16 @@ class Booking {
         status: BookingStatus.fromJson(json['booking_status'] ?? {}),
         user: UserModel.fromJson(json['user'] ?? {}),
         employee: json['employee'] == null ? null : UserModel.fromJson(json['employee']),
-        eServices: List<EService>.from(json['e_services'].map((service) => EService.fromJson(service))),
+        eServices: json['e_services'] == null
+            ? []
+            : List<EService>.from(json['e_services'].map((service) => EService.fromJson(service))),
         salon: Salon.fromJson(json['salon'] ?? {}),
         address: Address.fromJson(json['address'] ?? {}),
         coupon: Coupon.fromJson(json['coupon'] ?? {}),
         payment: Payment.fromJson(json['payment'] ?? {}),
-        options: List<Option>.from(json['options'].map((option) => Option.fromJson(option))),
-        taxes: List<Tax>.from(json['taxes'].map((tax) => Tax.fromJson(tax))),
+        options:
+            json['options'] == null ? [] : List<Option>.from(json['options'].map((option) => Option.fromJson(option))),
+        taxes: json['taxes'] == null ? [] : List<Tax>.from(json['taxes'].map((tax) => Tax.fromJson(tax))),
         bookingAt: JsonUtils.parseDatetimeFromJson(json['booking_at']),
         startAt: JsonUtils.parseDatetimeFromJson(json['start_at']),
         endsAt: JsonUtils.parseDatetimeFromJson(json['ends_at']),
