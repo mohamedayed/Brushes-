@@ -52,7 +52,7 @@ class ApiClient {
     final String? token = await _cacheClient.get(StorageKeys.token);
     return await _dio.get(
       url,
-      queryParameters: {if (token != null) "api_token": token, ...?queryParameters},
+      queryParameters: {if (token != null && useToken) "api_token": token, ...?queryParameters},
       options: Options(
         headers: {
           if (token != null && useToken) _authorization: "Bearer $token",

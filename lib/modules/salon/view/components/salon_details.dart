@@ -29,6 +29,7 @@ class SalonDetails extends GetView<SalonDetailsController> {
                   height: 36,
                   width: 36,
                   icon: AppIcons.call,
+                  iconColor: AppColors.black,
                   onTap: () => OutsourceServices.launch("tel:${controller.salon.value!.phoneNumber}"),
                 ),
                 HorizontalSpace(12),
@@ -88,7 +89,7 @@ class SalonDetails extends GetView<SalonDetailsController> {
           ),
           VerticalSpace(16),
           SizedBox(
-            height: 46,
+            height: AppSize.s56,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               padding: EdgeInsets.symmetric(horizontal: 16),

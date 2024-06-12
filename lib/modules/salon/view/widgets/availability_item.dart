@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +14,7 @@ class AvailabilityItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 46,
+      height: AppSize.s56,
       width: 125,
       clipBehavior: Clip.antiAlias,
       foregroundDecoration: BoxDecoration(
@@ -30,13 +31,15 @@ class AvailabilityItem extends StatelessWidget {
           Container(
             color: AppColors.primary,
             width: double.infinity,
+            alignment: Alignment.center,
             padding: EdgeInsets.all(4),
-            child: CustomText(availabilityHour.key.tr, fontSize: 10, color: AppColors.white),
+            child: CustomText(availabilityHour.key.tr, fontSize: FontSize.s12, color: AppColors.white),
           ),
-          VerticalSpace(8),
-          Directionality(
-            textDirection: TextDirection.ltr,
-            child: Center(child: CustomText(availabilityHour.value[0], fontSize: 10, autoSized: true)),
+          Expanded(
+            child: Directionality(
+              textDirection: TextDirection.ltr,
+              child: Center(child: CustomText(availabilityHour.value[0], fontSize: FontSize.s12, autoSized: true)),
+            ),
           ),
         ],
       ),

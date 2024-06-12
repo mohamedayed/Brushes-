@@ -82,7 +82,7 @@ class ServiceWithCartItem extends GetWidget<SalonDetailsController> {
                   const Spacer(),
                   StatefulBuilder(
                     builder: (context, setState) => controller.bookingBody.eServices!
-                                .indexWhere((s) => s.id == service.id) ==
+                                .indexWhere((s) => s.id == service.id) !=
                             -1
                         ? Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -96,7 +96,8 @@ class ServiceWithCartItem extends GetWidget<SalonDetailsController> {
                               ),
                               CustomButton(
                                 text: AppStrings.remove.tr,
-                                color: AppColors.white,
+                                textColor: AppColors.primary,
+                                height: AppSize.s32,
                                 isOutlined: true,
                                 onPressed: () {
                                   controller.bookingBody.eServices!.removeWhere((s) => s.id == service.id);
@@ -110,6 +111,7 @@ class ServiceWithCartItem extends GetWidget<SalonDetailsController> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               CustomButton(
+                                height: AppSize.s32,
                                 text: AppStrings.addToCart.tr,
                                 onPressed: () => Utils.invokeIfAuthenticated(
                                   callback: () {

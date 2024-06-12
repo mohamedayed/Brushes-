@@ -14,7 +14,7 @@ import 'tax_model.dart';
 class Salon {
   final int id;
   final EnArModel name;
-  final String description;
+  final EnArModel description;
   final List<Media> images;
   final String phoneNumber;
   final String mobileNumber;
@@ -55,10 +55,11 @@ class Salon {
   });
 
   factory Salon.fromJson(Map<String, dynamic> json) {
+    // https://mobile.tcare.ae/api/salons/42?with=salonLevel%3BavailabilityHours%3Busers%3Btaxes%3Baddress
     return Salon(
       id: JsonUtils.parseIntFromJson(json['id']),
       name: EnArModel.fromJson(json['name'] ?? {}),
-      description: JsonUtils.parseStringFromJson(json['description']),
+      description: EnArModel.fromJson(json['description'] ?? {}),
       images: json["media"] == null ? [] : List<Media>.from(json["media"].map((image) => Media.fromJson(image))),
       phoneNumber: JsonUtils.parseStringFromJson(json['phone_number']),
       mobileNumber: JsonUtils.parseStringFromJson(json['mobile_number']),
