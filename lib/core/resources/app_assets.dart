@@ -12,6 +12,7 @@ class AppImages {
 class AppIcons {
   static const String bell = "$_iconsPath/bell.svg";
   static const String call = "$_iconsPath/call.svg";
+  static const String camera = "$_iconsPath/camera.svg";
   static const String eye = "$_iconsPath/eye.svg";
   static const String eyeSlash = "$_iconsPath/eye_slash.svg";
   static const String facebook = "$_iconsPath/facebook.svg";
@@ -19,6 +20,7 @@ class AppIcons {
   static const String heart = "$_iconsPath/heart.svg";
   static const String home = "$_iconsPath/home.svg";
   static const String homeActive = "$_iconsPath/home_active.svg";
+  static const String image = "$_iconsPath/image.svg";
   static const String location = "$_iconsPath/location.svg";
   static const String lock = "$_iconsPath/lock.svg";
   static const String message = "$_iconsPath/message.svg";
@@ -28,6 +30,7 @@ class AppIcons {
   static const String profile = "$_iconsPath/profile.svg";
   static const String profileActive = "$_iconsPath/profile_active.svg";
   static const String search = "$_iconsPath/search.svg";
+  static const String send = "$_iconsPath/send.svg";
   static const String shop = "$_iconsPath/shop.svg";
   static const String shopActive = "$_iconsPath/shop_active.svg";
   static const String sms = "$_iconsPath/sms.svg";

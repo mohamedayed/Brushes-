@@ -44,7 +44,7 @@ class SalonDetails extends GetView<SalonDetailsController> {
                   height: 36,
                   width: 36,
                   icon: AppIcons.messages,
-                  onTap: () {},
+                  onTap: controller.startChat,
                 ),
               ],
             ),

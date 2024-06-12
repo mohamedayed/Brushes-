@@ -114,7 +114,7 @@ Future<void> init() async {
   sl.registerFactory<BookingRatingController>(() => BookingRatingController(sl<BookingRepo>()));
   sl.registerFactory<CategoriesController>(() => CategoriesController(sl<CategoriesRepo>()));
   sl.registerFactory<CategoryServicesController>(() => CategoryServicesController(sl<EServiceRepo>()));
-  sl.registerFactory<ChatController>(() => ChatController(sl<ChatRepo>()));
+  sl.registerFactory<ChatController>(() => ChatController(sl<ChatRepo>(), sl<NotificationsRepo>()));
   sl.registerFactory<BookServiceController>(() => BookServiceController(sl<BookEServiceRepo>()));
   sl.registerFactory<CheckoutController>(() => CheckoutController(sl<CheckoutRepo>(), sl<BookingRepo>()));
   sl.registerFactory<EServiceDetailsController>(() => EServiceDetailsController(sl<EServiceRepo>()));

@@ -151,4 +151,9 @@ class AppStrings {
   static const String elementAdded = "العناصر المضافة";
   static const String cartIsEmpty = "السلة فارغة. الرجاء اضافة الخدمات لإكمال الطلب";
   static const String deleteFromCart = "حذف من السلة";
+  static const String pleaseUploadImage = "الرجاء تحديد ملف الصورة";
+  static const String imageOrUrl = "صورة أو عنوان URL";
+  static const String chatsEmpty = "قائمة المحادثات فارغة";
+  static const String typeToStartChatting = "اكتب لبدء المحادثة";
+  static const String typeMessageToStartChatting = "اكتب رسالة لبدء المحادثة!";
 }

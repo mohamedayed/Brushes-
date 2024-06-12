@@ -1,5 +1,6 @@
 // Components
 export './components/app_bottom_sheet.dart';
+export './components/circular_loading_animated.dart';
 export './components/confirmation_dialog.dart';
 export './components/empty_list_component.dart';
 export './components/error_component.dart';

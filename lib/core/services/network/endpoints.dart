@@ -9,6 +9,7 @@ class EndPoints {
   static const String assignedCategories = '/assigned-categories';
   static const String getSalons = '/salons';
   static const String getNotificationsCount = '/notifications/count';
+  static const String notifications = '/notifications';
   static const String eServices = '/e_services';
   static const String availabilityHours = '/availability_hours';
   static const String addresses = '/addresses';

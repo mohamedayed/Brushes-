@@ -1,5 +1,6 @@
 import 'package:brushes/core/services/network/endpoints.dart';
 import 'package:brushes/core/utils/globals.dart';
+import 'package:brushes/modules/profile/models/responses/user_model.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../core/services/error/failure.dart';
@@ -20,6 +21,28 @@ class NotificationsRepo extends BaseRepository {
           'searchFields': 'notifiable_id:=',
           'searchJoin': 'and',
           'api_token': currentUser.value!.apiToken,
+        },
+      ),
+      successReturn: (data) => data,
+    );
+  }
+
+  Future<Either<Failure, bool>> sendNotification(
+    List<UserModel> users,
+    UserModel from,
+    String type,
+    String text,
+    String id,
+  ) async {
+    return super.call<bool>(
+      httpRequest: () => _apiClient.post(
+        url: EndPoints.notifications,
+        requestBody: {
+          'users': users.map((e) => e.id).toList(),
+          'from': from.id,
+          'type': type,
+          'text': text,
+          'id': id,
         },
       ),
       successReturn: (data) => data,

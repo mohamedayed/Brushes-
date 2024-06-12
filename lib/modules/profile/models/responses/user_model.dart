@@ -5,7 +5,7 @@ class UserModel {
   final int id;
   final String name;
   final String email;
-  final Media avatar;
+  Media avatar;
   final String apiToken;
   final String deviceToken;
   final String phoneNumber;
@@ -47,4 +47,14 @@ class UserModel {
         auth: JsonUtils.parseBoolFromJson(json['auth']),
         role: JsonUtils.parseStringFromJson(json["user_role"]),
       );
+
+  Map toRestrictMap() {
+    return {
+      "id": id,
+      "email": email,
+      "name": name,
+      "thumb": avatar.thumb,
+      "device_token": deviceToken,
+    };
+  }
 }

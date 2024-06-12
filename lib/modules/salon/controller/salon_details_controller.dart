@@ -2,13 +2,13 @@ import 'package:brushes/core/utils/globals.dart';
 import 'package:brushes/modules/booking/models/requests/booking_body.dart';
 import 'package:brushes/modules/categories/models/responses/category_model.dart';
 import 'package:brushes/modules/categories/repositories/categories_repo.dart';
+import 'package:brushes/modules/chat/models/responses/chat_model.dart';
 import 'package:brushes/modules/e_service/models/responses/e_service_model.dart';
+import 'package:brushes/modules/profile/models/responses/user_model.dart';
 import 'package:brushes/modules/salon/models/responses/salon_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/get_rx.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
-
+import '../../../config/navigation/navigation.dart';
 import '../../../core/utils/alerts.dart';
 import '../repositories/salon_repo.dart';
 
@@ -68,5 +68,14 @@ class SalonDetailsController extends GetxController {
       (salonServices) => this.salonServices(salonServices),
     );
     isLoadingServices(false);
+  }
+
+  void startChat() {
+    List<UserModel> employees = salon.value!.employees.map((e) {
+      e.avatar = salon.value!.images[0];
+      return e;
+    }).toList();
+    Chat chat = Chat(users: employees, name: salon.value!.name.ar);
+    Get.toNamed(Routes.chatScreen, arguments: chat);
   }
 }
