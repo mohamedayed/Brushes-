@@ -80,10 +80,8 @@ class ServiceWithCartItem extends GetWidget<SalonDetailsController> {
                     ],
                   ),
                   const Spacer(),
-                  StatefulBuilder(
-                    builder: (context, setState) => controller.bookingBody.eServices!
-                                .indexWhere((s) => s.id == service.id) !=
-                            -1
+                  Obx(
+                    () => controller.selectedServices.indexWhere((s) => s.id == service.id) != -1
                         ? Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -100,9 +98,8 @@ class ServiceWithCartItem extends GetWidget<SalonDetailsController> {
                                 height: AppSize.s32,
                                 isOutlined: true,
                                 onPressed: () {
-                                  controller.bookingBody.eServices!.removeWhere((s) => s.id == service.id);
-                                  controller.numberOfReservedServices(controller.numberOfReservedServices.value - 1);
-                                  setState(() {});
+                                  controller.selectedServices.removeWhere((s) => s.id == service.id);
+                                  controller.selectedServices.refresh();
                                 },
                               ),
                             ],
@@ -115,9 +112,8 @@ class ServiceWithCartItem extends GetWidget<SalonDetailsController> {
                                 text: AppStrings.addToCart.tr,
                                 onPressed: () => Utils.invokeIfAuthenticated(
                                   callback: () {
-                                    controller.bookingBody.eServices!.add(service);
-                                    controller.numberOfReservedServices(controller.numberOfReservedServices.value + 1);
-                                    setState(() {});
+                                    controller.selectedServices.add(service);
+                                    controller.selectedServices.refresh();
                                   },
                                 ),
                               ),

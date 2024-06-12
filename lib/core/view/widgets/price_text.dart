@@ -8,11 +8,13 @@ class PriceWidget extends StatelessWidget {
   final double myPrice;
   final String zeroPlaceholder;
   final double textSizeFactor;
+  final TextDecoration? textDecoration;
 
   const PriceWidget({
     required this.myPrice,
     this.zeroPlaceholder = '-',
     this.textSizeFactor = 1.0,
+    this.textDecoration,
     super.key,
   });
 
@@ -28,6 +30,7 @@ class PriceWidget extends StatelessWidget {
       maxLines: 1,
       text: TextSpan(
         style: TextStyle(
+          decoration: textDecoration,
           color: AppColors.primary,
           fontFamily: L10n.isAr(context) ? FontConstants.arabicFontFamily : FontConstants.englishFontFamily,
         ),

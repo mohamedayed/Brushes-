@@ -149,4 +149,6 @@ class AppStrings {
   static const String addedToCart = "تمت إضافته إلى سلة التسوق";
   static const String remove = "إزالة";
   static const String elementAdded = "العناصر المضافة";
+  static const String cartIsEmpty = "السلة فارغة. الرجاء اضافة الخدمات لإكمال الطلب";
+  static const String deleteFromCart = "حذف من السلة";
 }

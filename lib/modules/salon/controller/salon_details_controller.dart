@@ -7,6 +7,7 @@ import 'package:brushes/modules/salon/models/responses/salon_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_rx/get_rx.dart';
+import 'package:get/get_rx/src/rx_types/rx_types.dart';
 
 import '../../../core/utils/alerts.dart';
 import '../repositories/salon_repo.dart';
@@ -19,7 +20,7 @@ class SalonDetailsController extends GetxController {
 
   RxBool isLoading = false.obs;
   Rx<Salon?> salon = Rx<Salon?>(null);
-  RxInt numberOfReservedServices = 0.obs;
+  RxList<EService> selectedServices = <EService>[].obs;
   RxInt selectedCategory = 0.obs;
   RxList<CategoryModel> salonCategories = RxList<CategoryModel>([]);
   RxBool isLoadingServices = false.obs;
@@ -33,7 +34,7 @@ class SalonDetailsController extends GetxController {
     super.onInit();
     id = Get.arguments['id'];
     getSalon();
-    bookingBody.copyWith(userId: currentUser.value!.id, eServices: []);
+    bookingBody.copyWith(userId: currentUser.value!.id, eServices: [], options: [], quantity: 1);
   }
 
   Future<void> getSalon() async {

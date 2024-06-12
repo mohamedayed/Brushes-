@@ -2,6 +2,7 @@ import 'package:brushes/modules/salon/controller/salon_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../config/navigation/navigation.dart';
 import '../../../../core/resources/resources.dart';
 import '../../../../core/utils/utils.dart';
 import '../../../../core/view/views.dart';
@@ -39,7 +40,7 @@ class ReservedItemsBottomWidget extends GetWidget<SalonDetailsController> {
                 const VerticalSpace(4),
                 Obx(
                   () => CustomText(
-                    "${controller.numberOfReservedServices.value} ${AppStrings.elementAdded.tr}",
+                    "${controller.selectedServices.length} ${AppStrings.elementAdded.tr}",
                     fontSize: 12,
                     color: AppColors.grey,
                   ),
@@ -49,12 +50,10 @@ class ReservedItemsBottomWidget extends GetWidget<SalonDetailsController> {
           ),
           CustomButton(
             text: AppStrings.reserveItems.tr,
-            onPressed: () => Utils.invokeIfAuthenticated(
-              callback: () {
-                // var _booking = Get.find<SalonEServicesController>().booking.value;
-                // Get.toNamed(Routes.CART, arguments: {'booking': _booking});
-              },
-            ),
+            onPressed: () => Utils.invokeIfAuthenticated(callback: () {
+              controller.bookingBody.copyWith(eServices: controller.selectedServices);
+              Get.toNamed(Routes.salonCartScreen);
+            }),
           ),
         ],
       ),

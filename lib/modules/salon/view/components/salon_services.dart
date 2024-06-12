@@ -12,6 +12,9 @@ class SalonServices extends GetView<SalonDetailsController> {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback(
+      (timeStamp) => controller.salonServices.isEmpty ? controller.getSalonServices() : null,
+    );
     return CustomScrollView(
       slivers: [
         VerticalSpace.sliver(16),
