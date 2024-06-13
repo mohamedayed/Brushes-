@@ -1,3 +1,5 @@
+import 'package:brushes/modules/account/controller/account_controller.dart';
+
 import '../../../di_container.dart';
 import 'package:get/get.dart';
 
@@ -13,5 +15,6 @@ class LayoutBinding extends Bindings {
     Get.lazyPut(() => sl<HomeController>());
     Get.lazyPut(() => sl<MyBookingsController>());
     Get.lazyPut(() => sl<ChatController>());
+    Get.lazyPut(() => sl<AccountController>());
   }
 }

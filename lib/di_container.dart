@@ -1,4 +1,5 @@
 import 'package:brushes/core/services/address/address_service.dart';
+import 'package:brushes/modules/account/controller/account_controller.dart';
 import 'package:brushes/modules/auth/controller/social_auth_controller.dart';
 import 'package:brushes/modules/auth/repositories/social_auth_repo.dart';
 import 'package:brushes/modules/booking/controller/booking_rating_controller.dart';
@@ -131,4 +132,5 @@ Future<void> init() async {
   sl.registerFactory<ThemeController>(() => ThemeController());
   sl.registerFactory<LayoutController>(() => LayoutController(sl<NotificationsRepo>(), sl<AddressService>()));
   sl.registerFactory<SplashController>(() => SplashController(sl<ConfigsRepo>(), sl<ProfileRepo>(), sl<AuthRepo>()));
+  sl.registerFactory<AccountController>(() => AccountController(sl<AuthRepo>()));
 }

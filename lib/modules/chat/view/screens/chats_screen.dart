@@ -24,7 +24,7 @@ class ChatsScreen extends GetWidget<ChatController> {
                   physics: const AlwaysScrollableScrollPhysics(),
                   controller: controller.scrollController,
                   itemCount: chats.length,
-                  separatorBuilder: (context, index) => Divider(),
+                  separatorBuilder: (context, index) => Divider(height: AppSize.s24),
                   shrinkWrap: true,
                   primary: false,
                   itemBuilder: (context, index) => ChatTile(

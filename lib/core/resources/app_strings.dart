@@ -97,7 +97,7 @@ class AppStrings {
   static const String example = 'مثال';
   static const String addressNotAvailable = 'العنوان غير متوفر';
   static const String nearestSalons = "أقرب الصالونات إليك";
-  static const String addresses = "عناوين";
+  static const String addresses = "العناوين";
   static const String invalidCoupon = "قسيمة غير صالحة";
   static const String bookingSummary = "ملخص الحجز";
   static const String confirmAndBookNow = "التأكيد والحجز الآن";
@@ -156,4 +156,16 @@ class AppStrings {
   static const String chatsEmpty = "قائمة المحادثات فارغة";
   static const String typeToStartChatting = "اكتب لبدء المحادثة";
   static const String typeMessageToStartChatting = "اكتب رسالة لبدء المحادثة!";
+  static const String profile = "الملف الشخصي";
+  static const String myBookings = "حجوزاتي";
+  static const String notifications = "الإشعارات";
+  static const String messages = "الرسائل";
+  static const String favourites = "المفضلة";
+  static const String orders = "طلبات الشراء";
+  static const String wallet = "محافظ";
+  static const String languages = "اللغات";
+  static const String themeMode = "وضع السمات";
+  static const String privacyPolicy = "سياسة الخصوصية";
+  static const String logout = "تسجيل خروج";
+  static const String logoutHint = "متأكد أنك تريد تسجيل الخروج؟";
 }

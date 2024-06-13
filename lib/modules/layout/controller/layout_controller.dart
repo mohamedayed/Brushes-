@@ -45,7 +45,7 @@ class LayoutController extends GetxController {
   ];
 
   void setIndex(int? index) {
-    if (index == 2 || index == 3) {
+    if (index == 2 || index == 3 || index == 4) {
       Utils.invokeIfAuthenticated(callback: () => currentIndex(index));
     } else {
       currentIndex(index);

@@ -15,8 +15,11 @@ import '../../../../core/resources/resources.dart';
 import '../../../../core/view/views.dart';
 
 class NotificationsButtonWidget extends GetWidget<LayoutController> {
-  const NotificationsButtonWidget({super.key});
+  final double? size;
 
+  const NotificationsButtonWidget({this.size, super.key});
+
+  @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Utils.invokeIfAuthenticated(callback: () => Get.toNamed(Routes.notificationsScreen)),
@@ -25,8 +28,8 @@ class NotificationsButtonWidget extends GetWidget<LayoutController> {
         backgroundColor: AppColors.primary,
         alignment: AlignmentDirectional.topStart,
         child: Container(
-          width: double.infinity,
-          height: double.infinity,
+          width: size ?? double.infinity,
+          height: size ?? double.infinity,
           decoration: BoxDecoration(
             border: Border.all(color: AppColors.gray200),
             borderRadius: BorderRadius.circular(5),
