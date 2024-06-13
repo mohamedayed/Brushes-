@@ -18,7 +18,7 @@ class EService {
   final bool enableBooking;
   final bool enableAtSalon;
   final bool enableAtCustomerAddress;
-  final bool isFavorite;
+  bool isFavorite;
   final List<CategoryModel> categories;
   final List<CategoryModel> subCategories;
   final List<OptionGroup> optionGroups;

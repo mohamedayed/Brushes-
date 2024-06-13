@@ -2,7 +2,6 @@ import 'package:brushes/core/resources/resources.dart';
 import 'package:brushes/modules/booking/controller/my_bookings_controller.dart';
 import 'package:brushes/modules/booking/models/responses/booking_model.dart';
 import 'package:brushes/modules/booking/view/widgets/booking_item.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -38,6 +37,9 @@ class MyBookingsScreen extends GetWidget<MyBookingsController> {
                     (index) => Tab(
                       child: CustomText(
                         controller.bookingStatuses[index].status,
+                        autoSized: true,
+                        textAlign: TextAlign.center,
+                        fontSize: FontSize.s12,
                         fontWeight: FontWeightManager.bold,
                         color: controller.selectedBookingStatus.value == controller.bookingStatuses[index]
                             ? AppColors.white

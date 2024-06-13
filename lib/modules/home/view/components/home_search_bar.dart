@@ -26,6 +26,7 @@ class HomeSearchBar extends StatelessWidget {
               child: GestureDetector(
                 onTap: () => Get.toNamed(Routes.searchScreen),
                 child: CustomTextField(
+                  isDense: false,
                   enabled: false,
                   hintText: AppStrings.searchForServices.tr,
                   prefix: SvgPicture.asset(AppIcons.search),
