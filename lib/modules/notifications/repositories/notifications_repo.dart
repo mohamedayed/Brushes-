@@ -6,6 +6,7 @@ import 'package:dartz/dartz.dart';
 import '../../../core/services/error/failure.dart';
 import '../../../core/services/network/api_client.dart';
 import '../../../core/base/repositories/base_repository.dart';
+import '../models/responses/notification_model.dart';
 
 class NotificationsRepo extends BaseRepository {
   final ApiClient _apiClient;
@@ -46,6 +47,41 @@ class NotificationsRepo extends BaseRepository {
         },
       ),
       successReturn: (data) => data,
+    );
+  }
+
+  Future<Either<Failure, List<Notification>>> getNotifications() {
+    return super.call<List<Notification>>(
+      httpRequest: () => _apiClient.get(
+        url: EndPoints.notifications,
+        queryParameters: {
+          'search': 'notifiable_id:${currentUser.value!.id}',
+          'searchFields': 'notifiable_id:=',
+          'searchJoin': 'and',
+          'orderBy': 'created_at',
+          'sortedBy': 'desc',
+          'limit': '50',
+          'only': 'id;type;data;read_at;created_at',
+        },
+      ),
+      successReturn: (data) => List<Notification>.from(data.map((notification) => Notification.fromJson(notification))),
+    );
+  }
+
+  Future<Either<Failure, Notification>> removeNotification(String id) async {
+    return super.call<Notification>(
+      httpRequest: () => _apiClient.delete(url: '${EndPoints.notifications}/$id'),
+      successReturn: (data) => Notification.fromJson(data),
+    );
+  }
+
+  Future<Either<Failure, Notification>> markAsReadNotification(Notification notification) async {
+    return super.call<Notification>(
+      httpRequest: () => _apiClient.update(
+        url: '${EndPoints.notifications}/${notification.id}',
+        requestBody: notification.markReadMap(),
+      ),
+      successReturn: (data) => Notification.fromJson(data),
     );
   }
 }

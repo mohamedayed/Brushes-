@@ -1,3 +1,4 @@
+import 'package:brushes/core/services/notifications/notifications_service.dart';
 import 'package:brushes/core/utils/globals.dart';
 import 'package:brushes/core/utils/utils.dart';
 import 'package:brushes/modules/account/view/screens/account_screen.dart';
@@ -16,8 +17,9 @@ import '../../home/view/screens/home_screen.dart';
 class LayoutController extends GetxController {
   final NotificationsRepo _notificationsRepo;
   final AddressService _addressService;
+  final NotificationsService _notificationsService;
 
-  LayoutController(this._notificationsRepo, this._addressService);
+  LayoutController(this._notificationsRepo, this._addressService, this._notificationsService);
 
   @override
   void onInit() {
@@ -34,7 +36,6 @@ class LayoutController extends GetxController {
   }
 
   RxInt currentIndex = 0.obs;
-  RxInt notificationsCount = 0.obs;
 
   List<Widget> screens = const [
     HomeScreen(),
@@ -56,7 +57,7 @@ class LayoutController extends GetxController {
     final result = await _notificationsRepo.getNotificationsCount();
     result.fold(
       (failure) => Alerts.showSnackBar(message: failure.message, onActionPressed: getNotificationsCount),
-      (notificationsCount) => this.notificationsCount(notificationsCount),
+      (notificationsCount) => _notificationsService.setCurrentNotificationsCount(notificationsCount),
     );
   }
 }

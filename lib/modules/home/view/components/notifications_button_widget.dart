@@ -6,6 +6,7 @@
  */
 
 import 'package:brushes/config/navigation/routes.dart';
+import 'package:brushes/core/services/notifications/notifications_service.dart';
 import 'package:brushes/core/utils/utils.dart';
 import 'package:brushes/modules/layout/controller/layout_controller.dart';
 import 'package:flutter/material.dart';
@@ -23,18 +24,23 @@ class NotificationsButtonWidget extends GetWidget<LayoutController> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Utils.invokeIfAuthenticated(callback: () => Get.toNamed(Routes.notificationsScreen)),
-      child: Badge(
-        label: Obx(() => Text(controller.notificationsCount.value.toString())),
-        backgroundColor: AppColors.primary,
-        alignment: AlignmentDirectional.topStart,
-        child: Container(
-          width: size ?? double.infinity,
-          height: size ?? double.infinity,
-          decoration: BoxDecoration(
-            border: Border.all(color: AppColors.gray200),
-            borderRadius: BorderRadius.circular(5),
+      child: Obx(
+        () => Badge(
+          label: NotificationsService.currentNotificationsCount.value == 0
+              ? const SizedBox.shrink()
+              : Text(NotificationsService.currentNotificationsCount.value.toString()),
+          backgroundColor:
+              NotificationsService.currentNotificationsCount.value == 0 ? AppColors.transparent : AppColors.primary,
+          alignment: AlignmentDirectional.topStart,
+          child: Container(
+            width: size ?? double.infinity,
+            height: size ?? double.infinity,
+            decoration: BoxDecoration(
+              border: Border.all(color: AppColors.gray200),
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: const Center(child: CustomIcon.svg(AppIcons.bell, size: AppSize.s24)),
           ),
-          child: const Center(child: CustomIcon.svg(AppIcons.bell, size: AppSize.s24)),
         ),
       ),
     );

@@ -4,6 +4,7 @@ class EndPoints {
   static const String signUp = '/register';
   static const String socialSignIn = '/social_login';
   static const String getProfile = '/user';
+  static const String users = '/users';
   static const String getHomeSliders = '/slides';
   static const String getCategories = '/categories';
   static const String assignedCategories = '/assigned-categories';

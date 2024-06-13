@@ -20,6 +20,7 @@ import 'core/services/local/cache_client.dart';
 import 'core/services/network/api_client.dart';
 import 'core/services/network/network_info.dart';
 
+import 'core/services/notifications/notifications_service.dart';
 import 'modules/addresses/repositories/addresses_repo.dart';
 import 'modules/auth/repositories/auth_repo.dart';
 import 'modules/booking/repositories/booking_repo.dart';
@@ -78,6 +79,7 @@ Future<void> init() async {
   sl.registerLazySingleton<NetworkInfo>(() => NetworkInfo(sl<Connectivity>()));
   sl.registerLazySingleton<ApiClient>(() => ApiClient(sl<Dio>(), sl<CacheClient>(), sl<PrettyDioLogger>()));
   sl.registerLazySingleton<AddressService>(() => AddressService(sl<CacheClient>()));
+  sl.registerLazySingleton<NotificationsService>(() => NotificationsService());
 
   // Repositories
   sl.registerLazySingleton<ConfigsRepo>(() => ConfigsRepo(sl<ApiClient>(), sl<NetworkInfo>()));
@@ -122,7 +124,7 @@ Future<void> init() async {
   sl.registerFactory<FavouritesController>(() => FavouritesController(sl<FavouritesRepo>()));
   sl.registerFactory<HomeController>(() => HomeController(sl<HomeRepo>(), sl<CategoriesRepo>()));
   sl.registerFactory<PrivacyPolicyController>(() => PrivacyPolicyController(sl<InfoPagesRepo>()));
-  sl.registerFactory<NotificationsController>(() => NotificationsController(sl<NotificationsRepo>()));
+  sl.registerFactory<NotificationsController>(() => NotificationsController(sl<NotificationsRepo>(), sl<NotificationsService>()));
   sl.registerFactory<BuyProductController>(() => BuyProductController(sl<ProductsRepo>()));
   sl.registerFactory<ProductDetailsController>(() => ProductDetailsController(sl<ProductsRepo>()));
   sl.registerFactory<ProfileController>(() => ProfileController(sl<ProfileRepo>()));
@@ -130,7 +132,7 @@ Future<void> init() async {
   sl.registerFactory<SalonDetailsController>(() => SalonDetailsController(sl<CategoriesRepo>(), sl<SalonRepo>()));
   sl.registerFactory<sc.SearchController>(() => sc.SearchController(sl<SearchRepo>(), sl<CategoriesRepo>()));
   sl.registerFactory<ThemeController>(() => ThemeController());
-  sl.registerFactory<LayoutController>(() => LayoutController(sl<NotificationsRepo>(), sl<AddressService>()));
+  sl.registerFactory<LayoutController>(() => LayoutController(sl<NotificationsRepo>(), sl<AddressService>(),sl<NotificationsService>()));
   sl.registerFactory<SplashController>(() => SplashController(sl<ConfigsRepo>(), sl<ProfileRepo>(), sl<AuthRepo>()));
   sl.registerFactory<AccountController>(() => AccountController(sl<AuthRepo>()));
 }

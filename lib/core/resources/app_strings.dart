@@ -168,4 +168,7 @@ class AppStrings {
   static const String privacyPolicy = "سياسة الخصوصية";
   static const String logout = "تسجيل خروج";
   static const String logoutHint = "متأكد أنك تريد تسجيل الخروج؟";
+  static const String editProfile = "تعديل الصفحة الشخصية";
+  static const String deleteAccount = "حذف الحساب";
+  static const String noNotifications = "لا توجد أي إشعارات";
 }
