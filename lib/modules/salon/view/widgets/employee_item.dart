@@ -1,5 +1,5 @@
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/profile/models/responses/user_model.dart';
+import '../../../../core/view/views.dart';
+import '../../../profile/models/responses/user_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/resources/resources.dart';

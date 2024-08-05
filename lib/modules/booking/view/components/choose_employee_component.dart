@@ -1,4 +1,4 @@
-import 'package:brushes/modules/booking/controller/book_service_controller.dart';
+import '../../controller/book_service_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

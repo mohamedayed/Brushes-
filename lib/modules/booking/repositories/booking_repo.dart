@@ -1,6 +1,6 @@
-import 'package:brushes/core/services/network/endpoints.dart';
-import 'package:brushes/modules/booking/models/requests/add_review_body.dart';
-import 'package:brushes/modules/booking/models/requests/booking_body.dart';
+import '../../../core/services/network/endpoints.dart';
+import '../models/requests/add_review_body.dart';
+import '../models/requests/booking_body.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../core/base/models/pagination_model.dart';

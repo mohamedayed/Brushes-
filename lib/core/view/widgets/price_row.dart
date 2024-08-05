@@ -1,6 +1,6 @@
-import 'package:brushes/core/resources/app_values.dart';
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/view/views.dart';
+import '../../resources/app_values.dart';
+import '../../resources/resources.dart';
+import '../views.dart';
 import 'package:flutter/material.dart';
 
 class PriceRow extends StatelessWidget {

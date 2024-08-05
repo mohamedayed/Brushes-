@@ -1,6 +1,6 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/services/outsource_services.dart';
-import 'package:brushes/modules/salon/controller/salon_details_controller.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/services/outsource_services.dart';
+import '../../controller/salon_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

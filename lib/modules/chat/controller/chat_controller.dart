@@ -1,11 +1,11 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/alerts.dart';
-import 'package:brushes/core/utils/globals.dart';
-import 'package:brushes/core/utils/pickers.dart';
-import 'package:brushes/modules/chat/models/responses/chat_model.dart';
-import 'package:brushes/modules/chat/models/responses/message_model.dart';
-import 'package:brushes/modules/notifications/repositories/notifications_repo.dart';
-import 'package:brushes/modules/profile/models/responses/user_model.dart';
+import '../../../core/resources/resources.dart';
+import '../../../core/utils/alerts.dart';
+import '../../../core/utils/globals.dart';
+import '../../../core/utils/pickers.dart';
+import '../models/responses/chat_model.dart';
+import '../models/responses/message_model.dart';
+import '../../notifications/repositories/notifications_repo.dart';
+import '../../profile/models/responses/user_model.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 

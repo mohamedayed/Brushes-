@@ -1,4 +1,4 @@
-import 'package:brushes/core/resources/resources.dart';
+import '../resources/resources.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../utils/alerts.dart';

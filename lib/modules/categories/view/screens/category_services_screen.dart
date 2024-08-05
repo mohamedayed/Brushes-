@@ -1,8 +1,8 @@
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/categories/view/widgets/category_item.dart';
-import 'package:brushes/modules/e_service/models/responses/e_service_model.dart';
-import 'package:brushes/modules/e_service/view/widgets/service_item.dart';
+import '../../../../core/utils/utils.dart';
+import '../../../../core/view/views.dart';
+import '../widgets/category_item.dart';
+import '../../../e_service/models/responses/e_service_model.dart';
+import '../../../e_service/view/widgets/service_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

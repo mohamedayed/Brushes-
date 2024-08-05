@@ -1,5 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:brushes/config/localization/l10n/l10n.dart';
+import '../../../config/localization/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
 import '../../resources/resources.dart';

@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:brushes/core/extensions/non_null_extensions.dart';
-import 'package:brushes/core/resources/app_strings.dart';
-import 'package:brushes/core/utils/alerts.dart';
-import 'package:brushes/modules/booking/models/requests/add_review_body.dart';
-import 'package:brushes/modules/booking/repositories/booking_repo.dart';
+import '../../../core/extensions/non_null_extensions.dart';
+import '../../../core/resources/app_strings.dart';
+import '../../../core/utils/alerts.dart';
+import '../models/requests/add_review_body.dart';
+import '../repositories/booking_repo.dart';
 import 'package:get/get.dart';
 import 'package:get/get_rx/get_rx.dart';
 

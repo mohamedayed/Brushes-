@@ -1,7 +1,7 @@
-import 'package:brushes/core/resources/app_values.dart';
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/core/view/views.dart';
+import '../../../../core/resources/app_values.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/utils/utils.dart';
+import '../../../../core/view/views.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

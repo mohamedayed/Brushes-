@@ -1,12 +1,12 @@
-import 'package:brushes/core/services/notifications/notifications_service.dart';
-import 'package:brushes/core/utils/globals.dart';
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/modules/account/view/screens/account_screen.dart';
-import 'package:brushes/modules/booking/view/screens/my_bookings_screen.dart';
-import 'package:brushes/modules/chat/view/screens/chats_screen.dart';
-import 'package:brushes/modules/home/controller/home_controller.dart';
-import 'package:brushes/modules/notifications/repositories/notifications_repo.dart';
-import 'package:brushes/modules/products/view/screens/products_screen.dart';
+import '../../../core/services/notifications/notifications_service.dart';
+import '../../../core/utils/globals.dart';
+import '../../../core/utils/utils.dart';
+import '../../account/view/screens/account_screen.dart';
+import '../../booking/view/screens/my_bookings_screen.dart';
+import '../../chat/view/screens/chats_screen.dart';
+import '../../home/controller/home_controller.dart';
+import '../../notifications/repositories/notifications_repo.dart';
+import '../../products/view/screens/products_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

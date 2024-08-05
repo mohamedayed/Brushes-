@@ -1,4 +1,4 @@
-import 'package:brushes/config/navigation/navigation.dart';
+import '../../../../config/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

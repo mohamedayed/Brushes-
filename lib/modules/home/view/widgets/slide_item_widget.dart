@@ -1,7 +1,7 @@
-import 'package:brushes/core/utils/ui_utils.dart';
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/home/models/responses/home_slider_model.dart';
+import '../../../../core/utils/ui_utils.dart';
+import '../../../../core/utils/utils.dart';
+import '../../../../core/view/views.dart';
+import '../../models/responses/home_slider_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

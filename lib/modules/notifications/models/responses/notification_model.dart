@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:brushes/core/utils/json_utils.dart';
+import '../../../../core/utils/json_utils.dart';
 import 'package:get/get.dart';
 
 class Notification {

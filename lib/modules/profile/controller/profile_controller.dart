@@ -1,4 +1,4 @@
-import 'package:brushes/core/utils/globals.dart';
+import '../../../core/utils/globals.dart';
 import 'package:get/get.dart';
 
 import '../models/requests/edit_profile_body.dart';

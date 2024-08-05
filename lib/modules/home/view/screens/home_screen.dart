@@ -1,13 +1,13 @@
 import 'dart:math';
 
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/modules/home/controller/home_controller.dart';
-import 'package:brushes/modules/home/view/components/home_categories.dart';
-import 'package:brushes/modules/home/view/components/home_search_bar.dart';
-import 'package:brushes/modules/home/view/components/home_services_component.dart';
-import 'package:brushes/modules/home/view/components/home_slider.dart';
-import 'package:brushes/modules/salon/view/widgets/salon_item.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/utils/utils.dart';
+import '../../controller/home_controller.dart';
+import '../components/home_categories.dart';
+import '../components/home_search_bar.dart';
+import '../components/home_services_component.dart';
+import '../components/home_slider.dart';
+import '../../../salon/view/widgets/salon_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

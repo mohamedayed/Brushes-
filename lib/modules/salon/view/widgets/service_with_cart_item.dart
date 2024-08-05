@@ -1,6 +1,6 @@
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/salon/controller/salon_details_controller.dart';
+import '../../../../core/utils/utils.dart';
+import '../../../../core/view/views.dart';
+import '../../controller/salon_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,6 +1,6 @@
-import 'package:brushes/core/services/network/endpoints.dart';
-import 'package:brushes/core/utils/globals.dart';
-import 'package:brushes/modules/profile/models/responses/user_model.dart';
+import '../../../core/services/network/endpoints.dart';
+import '../../../core/utils/globals.dart';
+import '../../profile/models/responses/user_model.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../core/services/error/failure.dart';

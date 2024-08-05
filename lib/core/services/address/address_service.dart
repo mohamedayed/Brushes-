@@ -1,7 +1,7 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/services/local/cache_client.dart';
-import 'package:brushes/core/services/local/storage_keys.dart';
-import 'package:brushes/core/services/location/location_service.dart';
+import '../../resources/resources.dart';
+import '../local/cache_client.dart';
+import '../local/storage_keys.dart';
+import '../location/location_service.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 

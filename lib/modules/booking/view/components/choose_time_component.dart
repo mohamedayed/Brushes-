@@ -1,6 +1,6 @@
-import 'package:brushes/modules/booking/controller/book_service_controller.dart';
-import 'package:brushes/modules/booking/view/components/times_loading_component.dart';
-import 'package:brushes/modules/booking/view/widgets/time_chip_widget.dart';
+import '../../controller/book_service_controller.dart';
+import 'times_loading_component.dart';
+import '../widgets/time_chip_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

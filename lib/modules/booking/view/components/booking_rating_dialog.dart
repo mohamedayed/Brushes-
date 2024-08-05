@@ -1,4 +1,4 @@
-import 'package:brushes/modules/booking/controller/booking_rating_controller.dart';
+import '../../controller/booking_rating_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';

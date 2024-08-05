@@ -1,4 +1,4 @@
-import 'package:brushes/core/services/network/endpoints.dart';
+import '../../../core/services/network/endpoints.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../core/services/error/failure.dart';

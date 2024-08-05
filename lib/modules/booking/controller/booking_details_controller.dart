@@ -1,4 +1,4 @@
-import 'package:brushes/modules/booking/models/responses/booking_model.dart';
+import '../models/responses/booking_model.dart';
 import 'package:get/get.dart';
 
 import '../../../core/utils/alerts.dart';

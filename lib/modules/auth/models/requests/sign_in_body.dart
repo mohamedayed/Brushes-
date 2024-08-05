@@ -1,4 +1,4 @@
-import 'package:brushes/core/services/notifications/notification_fcm.dart';
+import '../../../../core/services/notifications/notification_fcm.dart';
 
 class SignInBody {
   String? email;

@@ -1,5 +1,5 @@
-import 'package:brushes/core/services/notifications/notifications_service.dart';
-import 'package:brushes/modules/notifications/models/responses/notification_model.dart';
+import '../../../core/services/notifications/notifications_service.dart';
+import '../models/responses/notification_model.dart';
 import 'package:get/get.dart';
 
 import '../../../core/utils/alerts.dart';

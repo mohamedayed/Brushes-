@@ -1,4 +1,4 @@
-import 'package:brushes/core/resources/resources.dart';
+import '../../../../core/resources/resources.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

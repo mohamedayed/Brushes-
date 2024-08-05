@@ -1,5 +1,5 @@
-import 'package:brushes/core/resources/app_assets.dart';
-import 'package:brushes/core/view/widgets/custom_image.dart';
+import '../../resources/app_assets.dart';
+import '../widgets/custom_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../resources/resources.dart';

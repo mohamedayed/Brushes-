@@ -1,6 +1,6 @@
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/booking/models/requests/booking_body.dart';
+import '../../../../core/utils/utils.dart';
+import '../../../../core/view/views.dart';
+import '../../models/requests/booking_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';

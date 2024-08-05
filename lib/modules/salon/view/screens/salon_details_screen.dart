@@ -1,9 +1,9 @@
-import 'package:brushes/config/localization/l10n/l10n.dart';
-import 'package:brushes/core/utils/dialogs.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/salon/controller/salon_details_controller.dart';
-import 'package:brushes/modules/salon/view/components/reserved_items_bottom_widget.dart';
-import 'package:brushes/modules/salon/view/components/salon_header.dart';
+import '../../../../config/localization/l10n/l10n.dart';
+import '../../../../core/utils/dialogs.dart';
+import '../../../../core/view/views.dart';
+import '../../controller/salon_details_controller.dart';
+import '../components/reserved_items_bottom_widget.dart';
+import '../components/salon_header.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

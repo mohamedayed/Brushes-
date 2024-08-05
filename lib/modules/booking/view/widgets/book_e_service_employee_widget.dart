@@ -1,6 +1,6 @@
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/booking/controller/book_service_controller.dart';
-import 'package:brushes/modules/profile/models/responses/user_model.dart';
+import '../../../../core/view/views.dart';
+import '../../controller/book_service_controller.dart';
+import '../../../profile/models/responses/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

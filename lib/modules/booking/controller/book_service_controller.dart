@@ -1,8 +1,8 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/alerts.dart';
-import 'package:brushes/modules/booking/models/requests/booking_body.dart';
-import 'package:brushes/modules/booking/models/requests/validate_coupon_body.dart';
-import 'package:brushes/modules/booking/repositories/book_e_service_repo.dart';
+import '../../../core/resources/resources.dart';
+import '../../../core/utils/alerts.dart';
+import '../models/requests/booking_body.dart';
+import '../models/requests/validate_coupon_body.dart';
+import '../repositories/book_e_service_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';

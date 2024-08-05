@@ -1,4 +1,4 @@
-import 'package:brushes/core/services/address/address_service.dart';
+import '../../../core/services/address/address_service.dart';
 import 'package:get/get.dart';
 
 import '../../../core/utils/alerts.dart';
@@ -6,7 +6,7 @@ import '../../categories/models/responses/category_model.dart';
 import '../../categories/repositories/categories_repo.dart';
 import '../../salon/models/responses/salon_model.dart';
 import '../repositories/home_repo.dart';
-import 'package:brushes/modules/home/models/responses/home_slider_model.dart';
+import '../models/responses/home_slider_model.dart';
 
 class HomeController extends GetxController {
   final HomeRepo _homeRepo;

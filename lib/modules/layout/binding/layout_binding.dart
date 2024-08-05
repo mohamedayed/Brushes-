@@ -1,4 +1,4 @@
-import 'package:brushes/modules/account/controller/account_controller.dart';
+import '../../account/controller/account_controller.dart';
 
 import '../../../di_container.dart';
 import 'package:get/get.dart';

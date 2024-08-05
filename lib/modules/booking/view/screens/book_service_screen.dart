@@ -1,5 +1,5 @@
-import 'package:brushes/core/extensions/non_null_extensions.dart';
-import 'package:brushes/modules/booking/view/components/choose_address_component.dart';
+import '../../../../core/extensions/non_null_extensions.dart';
+import '../components/choose_address_component.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

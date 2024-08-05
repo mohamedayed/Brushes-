@@ -1,9 +1,9 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/dialogs.dart';
-import 'package:brushes/core/utils/globals.dart';
-import 'package:brushes/modules/account/controller/account_controller.dart';
-import 'package:brushes/modules/home/view/components/notifications_button_widget.dart';
-import 'package:brushes/modules/layout/controller/layout_controller.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/utils/dialogs.dart';
+import '../../../../core/utils/globals.dart';
+import '../../controller/account_controller.dart';
+import '../../../home/view/components/notifications_button_widget.dart';
+import '../../../layout/controller/layout_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,4 +1,4 @@
-import 'package:brushes/modules/profile/models/responses/user_model.dart';
+import '../../../profile/models/responses/user_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Chat {

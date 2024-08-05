@@ -1,10 +1,10 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/services/outsource_services.dart';
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/booking/controller/booking_details_controller.dart';
-import 'package:brushes/modules/booking/models/requests/booking_body.dart';
-import 'package:brushes/modules/booking/view/components/booking_summary_bottom_widget.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/services/outsource_services.dart';
+import '../../../../core/utils/utils.dart';
+import '../../../../core/view/views.dart';
+import '../../controller/booking_details_controller.dart';
+import '../../models/requests/booking_body.dart';
+import '../components/booking_summary_bottom_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,4 +1,4 @@
-import 'package:brushes/modules/booking/models/requests/booking_body.dart';
+import '../models/requests/booking_body.dart';
 import 'package:get/get.dart';
 
 class BookingSummaryController extends GetxController {

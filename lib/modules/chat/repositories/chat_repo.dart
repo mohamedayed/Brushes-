@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:brushes/core/utils/constants.dart';
-import 'package:brushes/modules/chat/models/responses/chat_model.dart';
+import '../../../core/utils/constants.dart';
+import '../models/responses/chat_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 

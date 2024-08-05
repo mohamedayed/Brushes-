@@ -1,6 +1,6 @@
-import 'package:brushes/core/base/models/pagination_model.dart';
-import 'package:brushes/core/enums/category_filters.dart';
-import 'package:brushes/core/utils/constants.dart';
+import '../../../core/base/models/pagination_model.dart';
+import '../../../core/enums/category_filters.dart';
+import '../../../core/utils/constants.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../core/services/error/failure.dart';

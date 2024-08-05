@@ -1,7 +1,7 @@
-import 'package:brushes/config/localization/l10n/l10n.dart';
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/globals.dart';
-import 'package:brushes/core/view/views.dart';
+import '../../../config/localization/l10n/l10n.dart';
+import '../../resources/resources.dart';
+import '../../utils/globals.dart';
+import '../views.dart';
 import 'package:flutter/material.dart';
 
 class PriceWidget extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:brushes/core/base/models/en_ar_model.dart';
-import 'package:brushes/modules/categories/models/responses/category_model.dart';
+import '../../../../core/base/models/en_ar_model.dart';
+import '../../../categories/models/responses/category_model.dart';
 
 import '../../../../core/base/models/media_model.dart';
 import '../../../../core/utils/json_utils.dart';

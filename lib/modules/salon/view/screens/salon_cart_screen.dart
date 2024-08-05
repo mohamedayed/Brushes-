@@ -1,9 +1,9 @@
-import 'package:brushes/config/navigation/navigation.dart';
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/globals.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/salon/controller/salon_details_controller.dart';
-import 'package:brushes/modules/salon/view/widgets/salon_cart_item.dart';
+import '../../../../config/navigation/navigation.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/utils/globals.dart';
+import '../../../../core/view/views.dart';
+import '../../controller/salon_details_controller.dart';
+import '../widgets/salon_cart_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

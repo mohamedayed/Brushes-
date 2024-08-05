@@ -1,4 +1,4 @@
-import 'package:brushes/core/utils/globals.dart';
+import '../../../core/utils/globals.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../core/services/error/failure.dart';

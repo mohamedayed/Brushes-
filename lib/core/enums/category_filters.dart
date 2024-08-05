@@ -1,4 +1,4 @@
-import 'package:brushes/core/resources/resources.dart';
+import '../resources/resources.dart';
 import 'package:get/get.dart';
 
 enum CategoryFilter { all, availability, rating, featured, popular }

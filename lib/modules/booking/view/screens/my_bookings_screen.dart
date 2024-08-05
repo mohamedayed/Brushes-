@@ -1,7 +1,7 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/modules/booking/controller/my_bookings_controller.dart';
-import 'package:brushes/modules/booking/models/responses/booking_model.dart';
-import 'package:brushes/modules/booking/view/widgets/booking_item.dart';
+import '../../../../core/resources/resources.dart';
+import '../../controller/my_bookings_controller.dart';
+import '../../models/responses/booking_model.dart';
+import '../widgets/booking_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

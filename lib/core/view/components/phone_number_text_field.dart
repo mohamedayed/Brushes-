@@ -1,4 +1,4 @@
-import 'package:brushes/config/localization/l10n/l10n.dart';
+import '../../../config/localization/l10n/l10n.dart';
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

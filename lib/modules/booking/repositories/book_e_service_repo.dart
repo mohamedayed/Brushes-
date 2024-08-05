@@ -1,4 +1,4 @@
-import 'package:brushes/modules/booking/models/requests/validate_coupon_body.dart';
+import '../models/requests/validate_coupon_body.dart';
 import 'package:dartz/dartz.dart';
 import 'package:intl/intl.dart';
 

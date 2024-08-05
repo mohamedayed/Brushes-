@@ -1,4 +1,4 @@
-import 'package:brushes/core/base/models/en_ar_model.dart';
+import '../../../../core/base/models/en_ar_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/base/models/media_model.dart';

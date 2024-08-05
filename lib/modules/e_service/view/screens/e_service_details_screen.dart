@@ -1,9 +1,9 @@
-import 'package:brushes/config/navigation/navigation.dart';
-import 'package:brushes/core/utils/globals.dart';
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/booking/models/requests/booking_body.dart';
-import 'package:brushes/modules/e_service/controller/e_service_details_controller.dart';
+import '../../../../config/navigation/navigation.dart';
+import '../../../../core/utils/globals.dart';
+import '../../../../core/utils/utils.dart';
+import '../../../../core/view/views.dart';
+import '../../../booking/models/requests/booking_body.dart';
+import '../../controller/e_service_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';

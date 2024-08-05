@@ -1,6 +1,6 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/chat/controller/chat_controller.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/view/views.dart';
+import '../../controller/chat_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

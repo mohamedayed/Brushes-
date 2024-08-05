@@ -1,5 +1,5 @@
-import 'package:brushes/config/navigation/routes.dart';
-import 'package:brushes/modules/auth/repositories/auth_repo.dart';
+import '../../../config/navigation/routes.dart';
+import '../../auth/repositories/auth_repo.dart';
 import 'package:get/get.dart';
 
 import '../../../config/configs/configs_repo.dart';

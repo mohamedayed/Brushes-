@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:brushes/modules/home/controller/home_controller.dart';
-import 'package:brushes/modules/categories/view/widgets/category_item.dart';
+import '../../controller/home_controller.dart';
+import '../../../categories/view/widgets/category_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

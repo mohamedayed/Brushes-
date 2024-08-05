@@ -1,6 +1,6 @@
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/core/view/widgets/custom_text.dart';
-import 'package:brushes/core/view/widgets/custom_text_button.dart';
+import '../../../../core/view/views.dart';
+import '../../../../core/view/widgets/custom_text.dart';
+import '../../../../core/view/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/resources/resources.dart';

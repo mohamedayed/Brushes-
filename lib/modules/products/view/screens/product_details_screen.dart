@@ -1,8 +1,8 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/core/view/widgets/custom_text.dart';
-import 'package:brushes/core/view/widgets/custom_text_button.dart';
-import 'package:brushes/modules/products/controller/product_details_controller.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/view/views.dart';
+import '../../../../core/view/widgets/custom_text.dart';
+import '../../../../core/view/widgets/custom_text_button.dart';
+import '../../controller/product_details_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

@@ -1,7 +1,7 @@
-import 'package:brushes/core/utils/globals.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/core/view/widgets/custom_text.dart';
-import 'package:brushes/modules/profile/models/responses/user_model.dart';
+import '../../../../core/utils/globals.dart';
+import '../../../../core/view/views.dart';
+import '../../../../core/view/widgets/custom_text.dart';
+import '../../../profile/models/responses/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

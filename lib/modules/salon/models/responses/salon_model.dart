@@ -1,7 +1,7 @@
 import 'dart:core';
 
-import 'package:brushes/core/base/models/en_ar_model.dart';
-import 'package:brushes/modules/profile/models/responses/user_model.dart';
+import '../../../../core/base/models/en_ar_model.dart';
+import '../../../profile/models/responses/user_model.dart';
 
 import '../../../../core/base/models/media_model.dart';
 import '../../../../core/utils/json_utils.dart';

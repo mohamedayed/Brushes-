@@ -1,5 +1,5 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/globals.dart';
+import '../resources/resources.dart';
+import 'globals.dart';
 import 'package:get/get.dart';
 
 class UnitsUtils {

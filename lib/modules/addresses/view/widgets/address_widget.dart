@@ -1,6 +1,6 @@
-import 'package:brushes/core/services/address/address_service.dart';
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/modules/addresses/models/responses/address_model.dart';
+import '../../../../core/services/address/address_service.dart';
+import '../../../../core/utils/utils.dart';
+import '../../models/responses/address_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,8 +1,8 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/globals.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/core/view/widgets/custom_text.dart';
-import 'package:brushes/modules/chat/models/responses/message_model.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/utils/globals.dart';
+import '../../../../core/view/views.dart';
+import '../../../../core/view/widgets/custom_text.dart';
+import '../../models/responses/message_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

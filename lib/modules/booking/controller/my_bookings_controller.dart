@@ -1,7 +1,7 @@
-import 'package:brushes/core/utils/alerts.dart';
-import 'package:brushes/modules/booking/models/responses/booking_model.dart';
-import 'package:brushes/modules/booking/models/responses/booking_status.dart';
-import 'package:brushes/modules/booking/repositories/booking_repo.dart';
+import '../../../core/utils/alerts.dart';
+import '../models/responses/booking_model.dart';
+import '../models/responses/booking_status.dart';
+import '../repositories/booking_repo.dart';
 import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
 

@@ -1,9 +1,9 @@
 import 'dart:math';
 
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/categories/controller/categories_controller.dart';
-import 'package:brushes/modules/categories/view/widgets/category_item.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/view/views.dart';
+import '../../controller/categories_controller.dart';
+import '../widgets/category_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

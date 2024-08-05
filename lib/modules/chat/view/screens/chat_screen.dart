@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:brushes/core/utils/constants.dart';
-import 'package:brushes/modules/chat/controller/chat_controller.dart';
-import 'package:brushes/modules/chat/models/responses/chat_model.dart';
-import 'package:brushes/modules/chat/models/responses/message_model.dart';
-import 'package:brushes/modules/profile/models/responses/user_model.dart';
+import '../../../../core/utils/constants.dart';
+import '../../controller/chat_controller.dart';
+import '../../models/responses/chat_model.dart';
+import '../../models/responses/message_model.dart';
+import '../../../profile/models/responses/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';

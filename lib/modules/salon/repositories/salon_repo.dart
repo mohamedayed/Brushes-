@@ -1,5 +1,5 @@
-import 'package:brushes/core/services/network/endpoints.dart';
-import 'package:brushes/modules/salon/models/responses/salon_model.dart';
+import '../../../core/services/network/endpoints.dart';
+import '../models/responses/salon_model.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../core/services/error/failure.dart';

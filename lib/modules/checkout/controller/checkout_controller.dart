@@ -1,5 +1,5 @@
-import 'package:brushes/config/navigation/routes.dart';
-import 'package:brushes/core/resources/resources.dart';
+import '../../../config/navigation/routes.dart';
+import '../../../core/resources/resources.dart';
 import 'package:get/get.dart';
 
 import '../../../core/utils/alerts.dart';

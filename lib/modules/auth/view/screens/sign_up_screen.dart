@@ -1,5 +1,5 @@
-import 'package:brushes/core/view/components/phone_number_text_field.dart';
-import 'package:brushes/modules/auth/view/components/pp_agreement.dart';
+import '../../../../core/view/components/phone_number_text_field.dart';
+import '../components/pp_agreement.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter/material.dart';

@@ -1,7 +1,7 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/sheets.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/search/view/widgets/service_grid_item.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/utils/sheets.dart';
+import '../../../../core/view/views.dart';
+import '../widgets/service_grid_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

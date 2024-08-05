@@ -1,4 +1,4 @@
-import 'package:brushes/modules/e_service/models/responses/e_service_model.dart';
+import '../../../e_service/models/responses/e_service_model.dart';
 
 class ValidateCouponBody {
   String? coupon;

@@ -1,5 +1,5 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/view/views.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/view/views.dart';
 import 'package:flutter/material.dart';
 
 class BookingSummaryContainer extends StatelessWidget {

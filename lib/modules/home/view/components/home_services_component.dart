@@ -1,4 +1,4 @@
-import 'package:brushes/core/resources/resources.dart';
+import '../../../../core/resources/resources.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/view/views.dart';
 import '../../../e_service/models/responses/e_service_model.dart';

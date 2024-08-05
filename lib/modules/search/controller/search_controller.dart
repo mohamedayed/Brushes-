@@ -1,6 +1,6 @@
-import 'package:brushes/modules/categories/models/responses/category_model.dart';
-import 'package:brushes/modules/categories/repositories/categories_repo.dart';
-import 'package:brushes/modules/e_service/models/responses/e_service_model.dart';
+import '../../categories/models/responses/category_model.dart';
+import '../../categories/repositories/categories_repo.dart';
+import '../../e_service/models/responses/e_service_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

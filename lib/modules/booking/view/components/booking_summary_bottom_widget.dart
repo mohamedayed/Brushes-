@@ -1,6 +1,6 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/modules/booking/models/requests/booking_body.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/utils/utils.dart';
+import '../../models/requests/booking_body.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

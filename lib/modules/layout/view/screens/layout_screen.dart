@@ -1,5 +1,5 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/modules/layout/controller/layout_controller.dart';
+import '../../../../core/resources/resources.dart';
+import '../../controller/layout_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,4 +1,4 @@
-import 'package:brushes/modules/profile/models/responses/user_model.dart';
+import '../../../profile/models/responses/user_model.dart';
 
 import '../../../../core/utils/json_utils.dart';
 import '../../../addresses/models/responses/address_model.dart';

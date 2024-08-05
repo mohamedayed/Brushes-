@@ -1,8 +1,8 @@
-import 'package:brushes/core/resources/app_assets.dart';
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/home/view/components/notifications_button_widget.dart';
-import 'package:brushes/modules/products/view/widgets/products_item.dart';
+import '../../../../core/resources/app_assets.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/view/views.dart';
+import '../../../home/view/components/notifications_button_widget.dart';
+import '../widgets/products_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

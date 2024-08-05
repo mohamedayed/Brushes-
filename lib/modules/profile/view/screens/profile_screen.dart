@@ -1,6 +1,6 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/view/components/phone_number_text_field.dart';
-import 'package:brushes/core/view/widgets/custom_image.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/view/components/phone_number_text_field.dart';
+import '../../../../core/view/widgets/custom_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

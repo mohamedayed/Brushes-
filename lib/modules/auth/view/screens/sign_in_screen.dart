@@ -1,7 +1,7 @@
-import 'package:brushes/config/navigation/navigation.dart';
-import 'package:brushes/core/utils/constants.dart';
-import 'package:brushes/modules/auth/view/components/blurry_bg.dart';
-import 'package:brushes/modules/auth/view/components/social_auth_component.dart';
+import '../../../../config/navigation/navigation.dart';
+import '../../../../core/utils/constants.dart';
+import '../components/blurry_bg.dart';
+import '../components/social_auth_component.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter/material.dart';

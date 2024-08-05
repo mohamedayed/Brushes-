@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:brushes/core/resources/app_values.dart';
-import 'package:brushes/core/view/views.dart';
+import '../../resources/app_values.dart';
+import '../views.dart';
 import 'package:flutter/material.dart';
 
 class CircularLoadingAnimated extends StatefulWidget {

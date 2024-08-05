@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:brushes/core/extensions/color_extension.dart';
-import 'package:brushes/core/resources/resources.dart';
+import '../extensions/color_extension.dart';
+import '../resources/resources.dart';
 import 'package:intl/intl.dart';
 
 import '../base/models/media_model.dart';

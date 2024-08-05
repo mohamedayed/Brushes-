@@ -1,6 +1,6 @@
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/view/views.dart';
-import 'package:brushes/modules/checkout/view/components/checkout_bottom_widget.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/view/views.dart';
+import '../components/checkout_bottom_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

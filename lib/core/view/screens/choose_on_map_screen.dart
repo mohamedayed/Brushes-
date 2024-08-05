@@ -1,13 +1,12 @@
-import 'package:brushes/core/resources/app_values.dart';
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/view/widgets/custom_button.dart';
-import 'package:brushes/modules/addresses/models/responses/address_model.dart';
+import '../../resources/app_values.dart';
+import '../../resources/resources.dart';
+import '../widgets/custom_button.dart';
+import '../../../modules/addresses/models/responses/address_model.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../../../core/resources/app_colors.dart';
 import '../../../core/view/views.dart';
 import '../../services/location/location_service.dart';
 

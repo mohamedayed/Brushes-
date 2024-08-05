@@ -1,7 +1,7 @@
-import 'package:brushes/config/navigation/navigation.dart';
-import 'package:brushes/core/resources/resources.dart';
-import 'package:brushes/core/utils/utils.dart';
-import 'package:brushes/modules/categories/models/responses/category_model.dart';
+import '../../../../config/navigation/navigation.dart';
+import '../../../../core/resources/resources.dart';
+import '../../../../core/utils/utils.dart';
+import '../../models/responses/category_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
